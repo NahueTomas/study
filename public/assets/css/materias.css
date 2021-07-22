@@ -1,0 +1,52 @@
+.contenedor{
+    width: 88%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 800px;
+}
+
+.contenedor h1{
+    margin-top: 10rem;
+    text-align: center;
+    color: var(--gris-oscuro);
+    font-size: 2rem;
+}
+
+.carta-materia{
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0rem;
+    color: var(--blanco);
+    width: 350px;
+}
+
+.carta-materia h3{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: .5rem 0rem;
+    margin-bottom: 2.5rem;
+    font-weight: bolder;
+}
+
+.carta-materia-info{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--blanco);
+}
+
+.carta-materia-info p{
+    margin: .5rem 0rem;
+    font-size: .8rem;
+}
+
+.carta-materia-info .mazo{
+    font-weight: bolder;
+}
+
+.carta-materia-info .item{
+    font-size: 3rem;
+    margin: 0;
+}

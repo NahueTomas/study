@@ -1,0 +1,17 @@
+include ./templates/head.pug
+include ./templates/header.pug
+
+.contenedor
+    each dato in datos.materias
+        a.carta-materia(href="#", style=`background-color: #${dato.color}; box-shadow: 8px 8px #${dato.color}50;`)
+            h3= dato.materia
+            .carta-materia-info
+                .carta-materia-info-datos
+                    p.profesor= dato.prof
+                    p.mazo= `${dato.cartas.length} cartas(s)`
+                p.item= dato.logo
+    else
+        .contenedor
+            h1 No hay materias creadas todavía
+
+    include ./templates/boton.pug

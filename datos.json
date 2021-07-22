@@ -1,0 +1,45 @@
+{
+    "materias": [
+        {
+            "materia": "Teleinformatica",
+            "prof": "Pedro Corzi",
+            "logo": "🖥️",
+            "color": "9F8CC8",
+            "cartas": [
+                {"titulo": "Capa física 1", "contenido": "La Capa Física o Nivel 1 del modelo OSI proporciona los medios mecánicos, eléctricos, funcionales y de procedimiento para activar, mantener y desactivar conexiones físicas.", "link": "https://www.wikipedia.org"},
+                {"titulo": "Capa de transporte 1", "contenido": "El nivel de transporte o capa de transporte es el cuarto nivel del modelo OSI, ​ y está encargado de la transferencia libre de errores de los datos entre el emisor y el receptor, aunque no estén directamente conectados, así como de mantener el flujo de la red. Es la base de toda la jerarquía de protocolo.", "link": ""},
+                {"titulo": "Capa de presentación 1", "contenido": "blahbñajasdjaidjaoijdiasdojdasjodiajoidjaoidjoasjdiasjiodasisdjiasjdiajodjaijdoaisjiojoaidosajdsajdajsdadojanuda", "link": ""}
+            ]
+        },
+        {
+            "materia": "Inglés",
+            "prof": "Pedro Contreras",
+            "logo": "📖",
+            "color": "8CABC8",
+            "cartas": [
+                {"titulo": "Capa física 1", "contenido": "La Capa Física o Nivel 1 del modelo OSI proporciona los medios mecánicos, eléctricos, funcionales y de procedimiento para activar, mantener y desactivar conexiones físicas.", "link": "https://www.wikipedia.org"},
+                {"titulo": "Capa de transporte 1", "contenido": "El nivel de transporte o capa de transporte es el cuarto nivel del modelo OSI, ​ y está encargado de la transferencia libre de errores de los datos entre el emisor y el receptor, aunque no estén directamente conectados, así como de mantener el flujo de la red. Es la base de toda la jerarquía de protocolo.", "link": ""},
+                {"titulo": "Capa de presentación 1", "contenido": "blahbñajasdjaidjaoijdiasdojdasjodiajoidjaoidjoasjdiasjiodasisdjiasjdiajodjaijdoaisjiojoaidosajdsajdajsdadojanuda", "link": ""}
+            ]
+        },
+        {
+            "materia": "Historia",
+            "prof": "Colón",
+            "logo": "📚",
+            "color": "C88C9E",
+            "cartas": [
+                {"titulo": "Capa física 3", "contenido": "La Capa Física o Nivel 1 del modelo OSI proporciona los medios mecánicos, eléctricos, funcionales y de procedimiento para activar, mantener y desactivar conexiones físicas.", "link": "https://www.wikipedia.org"},
+                {"titulo": "Capa de transporte 3", "contenido": "El nivel de transporte o capa de transporte es el cuarto nivel del modelo OSI, ​ y está encargado de la transferencia libre de errores de los datos entre el emisor y el receptor, aunque no estén directamente conectados, así como de mantener el flujo de la red. Es la base de toda la jerarquía de protocolo.", "link": ""},
+                {"titulo": "Capa de presentación 3", "contenido": "blahbñajasdjaidjaoijdiasdojdasjodiajoidjaoidjoasjdiasjiodasisdjiasjdiajodjaijdoaisjiojoaidosajdsajdajsdadojanuda", "link": ""}
+            ]
+        },
+        {
+            "materia": "Redes",
+            "prof": "Angélico",
+            "logo": "🕸️",
+            "color": "C8A98C",
+            "cartas": [
+            ]
+        }
+    ]
+}

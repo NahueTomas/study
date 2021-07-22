@@ -1,0 +1,7 @@
+btn-mas{
+    border-radius: 10px;
+    background: var(--blanco);
+    position: fixed;
+    top: 0px;
+    left: 10px;
+}

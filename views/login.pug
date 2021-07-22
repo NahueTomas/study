@@ -1,0 +1,9 @@
+include ./templates/head.pug
+include ./templates/header.pug
+.contenedor-global
+    form.formulario-login(method="post" action="/login")
+        h2 Iniciar sesión
+        .contenedor-login
+            input(type="text", placeholder="Nombre de usuario" autocomplete="off")
+            input(type="password", placeholder="Contraseña")
+            input(type="submit", value="Iniciar sesión")

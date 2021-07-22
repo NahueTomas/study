@@ -1,0 +1,58 @@
+.contenedor-global{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.formulario-login{
+    max-width: 310px;
+    margin: auto;
+    background-color: var(--azul-medio);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--azul-claro);
+}
+
+.formulario-login h2{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    margin-top: 0px;
+    margin-bottom: 3rem;
+    display: inline-block;
+    border-bottom: 3px solid var(--blanco);
+    color: var(--blanco);
+}
+
+
+.contenedor-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-login input[type="text"], .contenedor-login input[type="password"]{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid var(--gris-claro);
+    margin-bottom: 1.5rem;
+    color: var(--blanco);
+    width: 100%;   
+}
+
+.contenedor-login input[type="text"]:focus, .contenedor-login input[type="password"]:focus{
+    outline: none;
+    transition: all .5s ease;
+    border-bottom: 1.5px solid var(--celeste);
+}
+
+.contenedor-login input[type="submit"]{
+    background: var(--celeste);
+    border: none;
+    border-radius: 10px;
+    margin-top: 2rem;
+    font-weight: 700;
+    color: var(--azul-medio);
+    font-size: .8rem;
+    padding: .3rem 1rem;
+}
