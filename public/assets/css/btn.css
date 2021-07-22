@@ -1,7 +1,14 @@
-btn-mas{
-    border-radius: 10px;
+.btn-mas{
+    border-radius: 15px;
     background: var(--blanco);
     position: fixed;
-    top: 0px;
-    left: 10px;
+    padding: .2rem 1.3rem;
+    bottom: 30px;
+    right: 30px;
+    border: none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: var(--azul-medio);
+    text-decoration: none;
 }

@@ -37,16 +37,16 @@
     border-bottom: 1px solid var(--blanco);
 }
 
-.carta-materia-info p{
+.profesor, .mazo{
     margin: .5rem 0rem;
     font-size: .8rem;
 }
 
-.carta-materia-info .mazo{
+.mazo{
     font-weight: bolder;
 }
 
-.carta-materia-info .item{
+.item{
     font-size: 3rem;
     margin: 0;
 }
