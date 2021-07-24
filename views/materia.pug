@@ -13,13 +13,16 @@ include ./templates/head.pug
         h3.titulo-contenedor Temas:
         ul.contenedor-temas
             each carta in datos.cartas
-                a(href=`/carta/${carta.id}`)= `- ${carta.titulo}`
+                a.tema(href=`/carta/${carta.id}`)= `- ${carta.titulo}`
+            else
+                h3.error No hay cartas creadas
+        h3.titulo-contenedor Cartas:
     include ./templates/boton.pug
 
 .contenedor-cartas
-    h3.titulo-contenedor Cartas:
-    .contenedor-temas
-        each carta in datos.cartas
-            a.carta(href=`/carta/${carta.id}` style=`background-color: ${carta.color};`)
-                h4= carta.titulo
-                img(src="/assets/svg/relleno-cartas.svg", alt="lineas decorativas")
+    .contenedor-temas.contenedor-desplazable
+        .scroll(style=`width:${datos.cartas.length * 160}px;`)
+            each carta in datos.cartas
+                a.carta(href=`/carta/${carta.id}` style=`background-color: #${carta.color};`)
+                    h4= carta.titulo
+                    img(src="/assets/svg/relleno-cartas.svg", alt="lineas decorativas")

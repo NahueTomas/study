@@ -23,7 +23,6 @@
 
 .contenedor-indide{
     width: 100%;
-    max-width: 350px;
 }
 
 .titulo-contenedor{
@@ -37,12 +36,14 @@
     color: var(--gris-oscuro);
     border-radius: 10px;
     margin-top: 0rem;
+    margin-bottom: 2rem;
     list-style-type: none;
     padding: 0rem;
-    padding: .5rem 1rem;
+    padding: 1rem 1rem;
+    border: 1px solid var(--azul-claro);
 }
 
-.contenedor-temas a{
+.contenedor-temas .tema{
     text-decoration: none;
     color: var(--gris-oscuro);
     font-size: .9rem;
@@ -50,6 +51,31 @@
     margin: .2rem 0rem;
 }
 
+.contenedor-desplazable{
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    overflow: scroll;
+}
+
 .carta{
-    width: 150px;
+    width: 140px;
+    height: 250px;
+    text-decoration: none;
+    text-align: center;
+    padding: .3rem 1rem;
+    margin: .5rem;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #00000050;
+}
+
+.scroll{
+    display: flex;
+    align-items: center;
+}
+
+.carta h4{
+    color: var(--azul-claro);
+    font-weight: bolder;
 }

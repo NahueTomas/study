@@ -1,4 +1,5 @@
 const express = require('express')
+const { dbConnection } = require('./bdd')
 
 class Server {
     constructor(){
@@ -6,7 +7,7 @@ class Server {
         this.port = process.env.PUERTO
 
         this.rutas = {
-            login: '/login',
+            login: '/auth',
             inicio: '/bienvenido',
             app: '/'
         }
@@ -22,11 +23,12 @@ class Server {
     }
 
     async conectarDB(){
-        // TODO    
+        await dbConnection();
     }
 
     middlewares(){
         this.app.use( express.json() )
+        this.app.use(express.urlencoded({extended: true}));
         this.app.use( express.static('public') )
         this.app.set('views', './views')
         this.app.set('view engine', 'pug')
@@ -34,7 +36,7 @@ class Server {
 
     routes(){
         this.app.use( this.rutas.app, require('../routes/app') )
-        this.app.use( this.rutas.login, require('../routes/login') )
+        this.app.use( this.rutas.login, require('../routes/auth') )
     }
 
     listen() {

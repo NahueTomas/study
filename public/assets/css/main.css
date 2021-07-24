@@ -35,3 +35,14 @@ body{
     background: var(--azul-oscuro);
 }
 
+.error{
+    text-align: center;
+}
+
+.advertencia{
+    color: var(--gris-claro);
+    display: block;
+    font-size: .8rem;
+    text-align: center;
+    margin: .5rem;
+}

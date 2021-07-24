@@ -21,7 +21,14 @@ router.get('/materia/:id', (req, res) => {
         }
     })
 
-    res.render( 'materia.pug',  {pagina : "STUDY - materia", datos, id: req.params.id})
+    res.render( 'materia.pug',  {pagina : "STUDY - materia", datos, id: req.params.id, crear: "nueva-carta"})
+})
+
+// TODO
+router.get('/carta/:id', (req, res) => {
+    let datos = {}
+
+    res.render( 'carta.pug',  {pagina : "STUDY - carta", datos, id: req.params.id})
 })
 
 module.exports = router
