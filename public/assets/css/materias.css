@@ -21,6 +21,8 @@
     margin: 1rem 0rem;
     color: var(--blanco);
     width: 350px;
+    background-color: var(--gris-claro);
+    box-shadow: 8px 8px var(--gris-oscuro);
 }
 
 .carta-materia h3{

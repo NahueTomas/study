@@ -4,6 +4,7 @@
 @import url('./materias.css');
 @import url('./btn.css');
 @import url('./materia.css');
+@import url('./nueva-materia.css');
 
 :root{
     --azul-oscuro: #1E2228;

@@ -1,0 +1,26 @@
+include ./templates/head.pug
+include ./templates/header.pug
+
+.contenedor
+    .carta-materia#tarjeta
+        h3#titulo Materia
+        .carta-materia-info
+            .carta-materia-info-datos
+                p.profesor#prof profesor
+                p.mazo 0 cartas
+            p.item 📖
+
+    .contenedor-campo
+        h3.titulo-contenedor Nueva materia
+        form.formulario-nuevo(action="/nueva-materia" method="POST")
+            input(type="text" placeholder="Materia: " name="materia" required autocomplete="off")
+            input(type="text" placeholder="Prof (opcional)" name="prof" autocomplete="off")
+            input.input-logo#logo(type="text" placeholder="logo" name="logo" required autocomplete="off")
+            .caja-inferior
+                select#seleccionador-color(name="color" required)
+                    option(selected disabled value="9F8CC8") Color 
+                    each color in colores
+                        option(value=`${color}` name="color")= color
+                input(type="submit" value="Crear")
+
+script(src="/js/nueva-materia.js") 

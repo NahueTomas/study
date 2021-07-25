@@ -1,4 +1,5 @@
 const express = require('express')
+const session = require('express-session')
 const { dbConnection } = require('./bdd')
 
 class Server {
@@ -32,6 +33,7 @@ class Server {
         this.app.use( express.static('public') )
         this.app.set('views', './views')
         this.app.set('view engine', 'pug')
+        this.app.use(session({secret: process.env.SECRETO, resave: false, saveUninitialized: false}))
     }
 
     routes(){

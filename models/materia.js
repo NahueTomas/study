@@ -17,6 +17,11 @@ const MateriaSchema = Schema({
         type: String,
         required: [true, 'El emoji de la materia es obligatorio']
     },
+    usuario:{
+        type: String,
+        required: [true, 'Error con ID de usuario']
+    }
+    ,
     cartas: {
         type: Array,
         default: []

@@ -16,7 +16,6 @@ router.get('/login', (req, res) => {
 router.post('/login', async (req, res) => {
     
     const { nombre, clave } = req.body
-    console.log(nombre, clave)
 
     try{
         
@@ -33,14 +32,19 @@ router.post('/login', async (req, res) => {
         // Generar JWT
         const token = await generarJWT( usuario._id )
 
-        console.log(usuario)
-        res.redirect('/auth/login')
+        req.session.token = token
 
+        res.redirect('/')
     } catch (err) {
         console.log(err)
         res.status(500).render('error.pug', { pagina: 'Error!!',  error: 'Hable con el administrador'})
     }
 })
+
+// CERRAR SESION
+router.get('/logout'), (req, res) =>{
+    res.redirect('/auth/login')
+}
 
 // ENVIA FORMULARIO DE REGISTRO
 router.get('/registro', (req, res) => {

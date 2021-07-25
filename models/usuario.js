@@ -8,10 +8,6 @@ const UsuarioSchema = Schema({
     clave: {
         type: String,
         required: [true, 'La contraseña es obligatoria'],
-    },
-    materias: {
-        type: Array,
-        default: []
     }
 });
 
