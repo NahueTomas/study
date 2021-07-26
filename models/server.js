@@ -5,7 +5,7 @@ const { dbConnection } = require('./bdd')
 class Server {
     constructor(){
         this.app = express()
-        this.port = process.env.PUERTO
+        this.port = process.env.PUERTO || process.env.PORT
 
         this.rutas = {
             login: '/auth',
