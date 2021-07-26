@@ -1,2 +1,8 @@
 include ./templates/head.pug
 
+.contenedor-centrador
+    .contenedor-carta-vista(style=`background-color: #${carta.color};`)
+        h1.titulo-carta-vista= carta.titulo
+        p.contenido-carta-vista= carta.contenido
+        if( carta.link )
+            a.link-carta-vista(href=`${carta.link}`, target="_blank") mas info...

@@ -55,7 +55,7 @@
     border-left: none;
     border-right: none;
     border-radius: 0px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .carta{

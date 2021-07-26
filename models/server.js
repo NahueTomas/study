@@ -9,7 +9,6 @@ class Server {
 
         this.rutas = {
             login: '/auth',
-            inicio: '/bienvenido',
             app: '/'
         }
 
@@ -37,8 +36,8 @@ class Server {
     }
 
     routes(){
-        this.app.use( this.rutas.app, require('../routes/app') )
         this.app.use( this.rutas.login, require('../routes/auth') )
+        this.app.use( this.rutas.app, require('../routes/app') )
     }
 
     listen() {

@@ -7,9 +7,15 @@ const { generarJWT } = require('../helpers/generar-jwt')
 
 const router = Router()
 
+// CERRAR SESION
+router.get('/logout', (req, res) =>{
+    req.session.token = ""
+    res.redirect("/")
+})
+
 // ENVIA FORMULARIO DE LOGIN
 router.get('/login', (req, res) => {
-    res.render( 'login.pug', {pagina: "Study - Inicia sesión"})
+    res.render( 'login.pug', {pagina: "Study - Inicia sesión", complemento1: "auth/registro", complemento2: "registrarse"})
 })
 
 // INICIA SESION
@@ -23,11 +29,11 @@ router.post('/login', async (req, res) => {
         
         // Si existe el nombre
         const usuario = await Usuario.findOne({ nombre })
-        if( !usuario ) {return res.render( 'login.pug', { pagina: "Study - Inicia sesión", error: 'El usuario y/o la contraseña están mal' })}
+        if( !usuario ) {return res.render( 'login.pug', { pagina: "Study - Inicia sesión", error: 'El usuario y/o la contraseña están mal', complemento1: "auth/registro", complemento2: "registrarse"})}
 
         // Si la contraseña es correcta
         const validPassword = bcryptjs.compareSync( clave, usuario.clave )
-        if ( !validPassword ) {return res.render( 'login.pug', { pagina: "Study - Inicia sesión", error: 'El usuario y/o la contraseña están mal' })}
+        if ( !validPassword ) {return res.render( 'login.pug', { pagina: "Study - Inicia sesión", error: 'El usuario y/o la contraseña están mal', complemento1: "auth/registro", complemento2: "registrarse"})}
 
         // Generar JWT
         const token = await generarJWT( usuario._id )
@@ -37,18 +43,13 @@ router.post('/login', async (req, res) => {
         res.redirect('/')
     } catch (err) {
         console.log(err)
-        res.status(500).render('error.pug', { pagina: 'Error!!',  error: 'Hable con el administrador'})
+        res.status(500).render('error.pug', { pagina: 'Error!!',  error: 'Hable con el administrador', complemento1: "auth/registro", complemento2: "registrarse"})
     }
 })
 
-// CERRAR SESION
-router.get('/logout'), (req, res) =>{
-    res.redirect('/auth/login')
-}
-
 // ENVIA FORMULARIO DE REGISTRO
 router.get('/registro', (req, res) => {
-    res.render( 'registro.pug', {pagina: "Study - Registro de usuario"})
+    res.render( 'registro.pug', {pagina: "Study - Registro de usuario", complemento1: "auth/login", complemento2: "login"})
 })
 
 // NUEVO USUARIO

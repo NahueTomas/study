@@ -15,11 +15,14 @@
 
 .formulario-nuevo input[type="text"]{
     background: none;
-    border: none;
-    outline: none;
     border-bottom: 1px solid var(--gris-claro);
     margin: .5rem;
     color: var(--blanco);
+}
+
+.formulario-nuevo input{
+    border: none;
+    outline: none;
 }
 
 .input-logo{
@@ -47,7 +50,6 @@
 
 .caja-inferior input[type="submit"]{
     background-color: var(--celeste);
-    border: none;
     font-weight: bolder;
     color: var(--azul-medio);
     border-radius: 10px;

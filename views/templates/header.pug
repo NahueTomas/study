@@ -1,5 +1,7 @@
 header
-    .contenedor-header
+    .contenedor-header 
         a(href="/")
-            img(src=`/assets/svg/logo.svg`, alt="logo de STUDY")
-            h1 study.app
+            img(src="/assets/svg/logo.svg", alt="logo de study")
+        a(href=`/${complemento1}`)= complemento2
+    .contenedor-error
+        p.error= error

@@ -1,0 +1,18 @@
+.contenido-carta-form{
+    min-width: 99%;
+    max-width: 99%;
+    margin: auto;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--blanco);
+    margin-top: 3rem;
+}
+
+.titulo-carta-form{
+    font-size: 1.2rem;
+}
+
+.link-carta-form{
+    font-size: .8rem;
+}

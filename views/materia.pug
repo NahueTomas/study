@@ -1,18 +1,19 @@
 include ./templates/head.pug
 
-.contenedor-header-materia(style=`background-color: #${datos.color}; box-shadow: 8px 0px #${datos.color}50;`)
-    h1= datos.materia
-    .contenedor-header-info
-        .contenedor-header-texto
-            p.profesor= datos.prof
-            p.mazo= `${datos.cartas.length} carta(s)`
-        p.item= datos.logo
+.main-container
+    .contenedor-header-materia(style=`background-color: #${datos.color}; box-shadow: 8px 0px #${datos.color}50;`)
+        h1= datos.materia
+        .contenedor-header-info
+            .contenedor-header-texto
+                p.profesor= datos.prof
+                p.mazo= `${cartas.length} carta(s)`
+            p.item= datos.logo
 
 .contenedor
     .contenedor-indide
         h3.titulo-contenedor Temas:
         ul.contenedor-temas
-            each carta in datos.cartas
+            each carta in cartas
                 a.tema(href=`/carta/${carta.id}`)= `- ${carta.titulo}`
             else
                 h3.error No hay cartas creadas
@@ -21,8 +22,9 @@ include ./templates/head.pug
 
 .contenedor-cartas
     .contenedor-temas.contenedor-desplazable
-        .scroll(style=`width:${datos.cartas.length * 160}px;`)
-            each carta in datos.cartas
-                a.carta(href=`/carta/${carta.id}` style=`background-color: #${carta.color};`)
-                    h4= carta.titulo
-                    img(src="/assets/svg/relleno-cartas.svg", alt="lineas decorativas")
+        .main-container
+            .scroll(style=`width:${datos.cartas.length * 160}px;`)
+                each carta in cartas
+                    a.carta(href=`/carta/${carta.id}` style=`background-color: #${carta.color};`)
+                        h4= carta.titulo
+                        img(src="/assets/svg/relleno-cartas.svg", alt="lineas decorativas")

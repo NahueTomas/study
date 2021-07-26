@@ -17,10 +17,10 @@ const CartaSchema = Schema({
         type: String,
         required: [true, 'El contenido es obligatorio']
     },
-    cartas: {
-        type: Array,
-        default: []
-    },
+    contenedor: {
+        type: String,
+        required: [true, 'El contenido es obligatorio']
+    }
 });
 
 module.exports = model( 'Carta', CartaSchema );

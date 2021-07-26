@@ -1,10 +1,10 @@
 include ./templates/head.pug
 include ./templates/header.pug
 .contenedor-global
-    form.formulario-login(method="POST" action="/auth/login")
-        h2 Iniciar sesión
-        .contenedor-login
-            input(type="text", placeholder="Nombre de usuario" autocomplete="off" name="nombre")
-            input(type="password", placeholder="Contraseña" name="clave")
-            h6.advertencia= error
-            input(type="submit", value="Iniciar sesión")
+    .main-container
+        form.formulario-login(method="POST" action="/auth/login")
+            h2 Iniciar sesión
+            .contenedor-login
+                input(type="text", placeholder="Nombre de usuario" autocomplete="off" name="nombre")
+                input(type="password", placeholder="Contraseña" name="clave")
+                input(type="submit", value="Iniciar sesión")

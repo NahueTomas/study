@@ -4,7 +4,9 @@
 @import url('./materias.css');
 @import url('./btn.css');
 @import url('./materia.css');
+@import url('./carta.css');
 @import url('./nueva-materia.css');
+@import url('./nueva-carta.css');
 
 :root{
     --azul-oscuro: #1E2228;
@@ -46,4 +48,10 @@ body{
     font-size: .8rem;
     text-align: center;
     margin: .5rem;
+}
+
+.main-container{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
 }

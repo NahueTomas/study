@@ -12,6 +12,7 @@
     padding: 1.5rem;
     border-radius: 10px;
     border: 2px solid var(--azul-claro);
+    width: 100%;
 }
 
 .formulario-login h2{
