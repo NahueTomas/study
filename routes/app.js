@@ -55,6 +55,12 @@ router.post('/nueva-carta', validarJWT, async (req, res)=> {
     const { titulo, link, color, contenido, contenedor } = req.body
 
     const nueva_carta = new Carta({titulo, link, color, contenido, contenedor})
+    
+    const materia = await Materia.findById(contenedor)
+    materia.cartas.append(nueva_carta._id)
+
+    Materia.updateOne(materia)
+
     nueva_carta.save()
     
     res.redirect(`/materia/${contenedor}`)

@@ -23,7 +23,7 @@ include ./templates/head.pug
 .contenedor-cartas
     .contenedor-temas.contenedor-desplazable
         .main-container
-            .scroll(style=`width:${datos.cartas.length * 160}px;`)
+            .scroll(style=`width:${cartas.length * 160}px;`)
                 each carta in cartas
                     a.carta(href=`/carta/${carta.id}` style=`background-color: #${carta.color};`)
                         h4= carta.titulo

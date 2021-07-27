@@ -23,9 +23,9 @@ const MateriaSchema = Schema({
     }
     ,
     cartas: {
-        type: Array,
+        type: String,
         default: []
-    },
+    }
 });
 
 module.exports = model( 'Materia', MateriaSchema );
