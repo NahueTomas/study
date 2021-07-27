@@ -24,7 +24,7 @@ const MateriaSchema = Schema({
     ,
     cartas: {
         type: String,
-        default: []
+        default: "0"
     }
 });
 

@@ -19,7 +19,7 @@ const CartaSchema = Schema({
     },
     contenedor: {
         type: String,
-        required: [true, 'El contenido es obligatorio']
+        required: [true, 'Error, no se cargó el contenedor']
     }
 });
 

@@ -24,7 +24,6 @@ router.get('/materia/:id',validarJWT, async (req, res) => {
     res.render( 'materia.pug',  {pagina : "STUDY - materia", datos: materia, cartas,id: req.params.id, crear: `nueva-carta/${materia._id}`})
 })
 
-// TODO
 router.get('/carta/:id', validarJWT, async (req, res) => {
     const carta = await Carta.findById(req.params.id)
     if(!carta) res.redirect('/')
@@ -55,12 +54,6 @@ router.post('/nueva-carta', validarJWT, async (req, res)=> {
     const { titulo, link, color, contenido, contenedor } = req.body
 
     const nueva_carta = new Carta({titulo, link, color, contenido, contenedor})
-    
-    const materia = await Materia.findById(contenedor)
-    materia.cartas.append(nueva_carta._id)
-
-    Materia.updateOne(materia)
-
     nueva_carta.save()
     
     res.redirect(`/materia/${contenedor}`)

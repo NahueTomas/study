@@ -18,9 +18,9 @@ include ./templates/header.pug
             input.input-logo#logo(type="text" placeholder="logo" name="logo" required autocomplete="off")
             .caja-inferior
                 select#seleccionador-color(name="color" required)
-                    option(selected disabled value="9F8CC8") Color 
+                    option(selected value="9F8CC8") Color 
                     each color in colores
                         option(value=`${color}` name="color")= color
                 input(type="submit" value="Crear")
 
-script(src="/js/nueva-materia.js") 
+script(src="/js/nueva-materia.js")
