@@ -32,7 +32,6 @@ router.get('/carta/:id', validarJWT, async (req, res) => {
     res.render( 'carta.pug',  {pagina : "STUDY - carta", carta})
 })
 
-
 router.get('/nueva-materia', validarJWT, async (req, res)=> {
     const colores = await Colore.find()
 
