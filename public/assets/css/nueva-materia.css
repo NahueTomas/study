@@ -20,6 +20,10 @@
     color: var(--blanco);
 }
 
+.formulario-nuevo input[type="text"]:focus{
+    border-bottom: 1px solid var(--celeste);
+}
+
 .formulario-nuevo input{
     border: none;
     outline: none;

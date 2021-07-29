@@ -1,0 +1,10 @@
+include ./templates/head.pug
+include ./templates/header.pug
+
+form.form-eliminar(action=`/${tipo}/${id}`, method="DELETE") 
+    h1 ¿Estás seguro?
+    h2 Una vez eliminado no hay vuelta a atras
+    input(type="hidden" value=`${id}` name="id")
+    input#enviar(type="submit" value="Eliminar")
+
+script(src=`/js/eliminar-${tipo}.js`)

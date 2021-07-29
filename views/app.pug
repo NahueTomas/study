@@ -3,15 +3,14 @@ include ./templates/header.pug
 
 .contenedor
     each dato in datos
-        a.carta-materia(href=`/materia/${dato.id}`, style=`background-color: #${dato.color}; box-shadow: 8px 8px #${dato.color}50;`)
+        a.carta-materia( href=`/materia/${dato.id}`, style=`background-color: #${dato.color}; box-shadow: 8px 8px #${dato.color}50;`)
             h3= dato.materia
             .carta-materia-info
                 .carta-materia-info-datos
-                    p.profesor= dato.prof
-                    p.mazo= ``
+                    p.dato-uno= dato.prof
+                    p.dato-dos vacío
                 p.item= dato.logo
     else
         .contenedor
             h1 No hay materias creadas todavía
-
     include ./templates/boton.pug

@@ -2,12 +2,18 @@ include ./templates/head.pug
 
 .main-container
     .contenedor-header-materia(style=`background-color: #${datos.color}; box-shadow: 8px 0px #${datos.color}50;`)
+        img.btn-opciones(src="/assets/svg/btn-opciones.svg")
         h1= datos.materia
         .contenedor-header-info
             .contenedor-header-texto
-                p.profesor= datos.prof
-                p.mazo= `${cartas.length} carta(s)`
+                p.dato-uno= datos.prof
+                p.dato-dos= `${cartas.length} carta(s)`
             p.item= datos.logo
+        ul.opciones
+            li 
+                a(href=`/editar-materia/${datos.id}`) Editar
+                a(href=`/eliminar-materia/${datos.id}`) Eliminar
+
 
 .contenedor
     .contenedor-indide
@@ -28,3 +34,5 @@ include ./templates/head.pug
                     a.carta(href=`/carta/${carta.id}` style=`background-color: #${carta.color};`)
                         h4= carta.titulo
                         img(src="/assets/svg/relleno-cartas.svg", alt="lineas decorativas")
+
+script(src="/js/materia-opciones.js") 

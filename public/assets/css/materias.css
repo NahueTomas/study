@@ -39,12 +39,12 @@
     border-bottom: 1px solid var(--blanco);
 }
 
-.profesor, .mazo{
+.dato-uno, .dato-dos{
     margin: .5rem 0rem;
     font-size: .8rem;
 }
 
-.mazo{
+.dato-dos{
     font-weight: bolder;
 }
 

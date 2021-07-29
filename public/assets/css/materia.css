@@ -3,7 +3,9 @@
     width: 96%;
     border-radius: 0px 0px 15px 0px;
     padding: 1rem;
+    position: relative;
 }
+
 .contenedor-header-materia h1{
     font-size: 2rem;
     margin: 0;
@@ -56,6 +58,7 @@
     border-right: none;
     border-radius: 0px;
     overflow: auto;
+    margin: 0;
 }
 
 .carta{
@@ -78,4 +81,28 @@
 .carta h4{
     color: var(--azul-claro);
     font-weight: bolder;
+}
+
+.opciones{
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+}
+
+.opciones-block{
+    height: 30px;
+    margin-top: .8rem;
+}
+
+.opciones li a{
+    text-decoration: none;
+    color: var(--blanco);
+    padding: .3rem 1rem;
+    border: 1px solid var(--blanco);
+    display: inline-block;
+    border-radius: 10px;
+    margin-right: .5rem;
+    font-size: .6rem;
 }

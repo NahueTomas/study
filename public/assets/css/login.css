@@ -6,12 +6,13 @@
 }
 
 .formulario-login{
-    max-width: 310px;
     margin: auto;
+    margin-top: 2rem;
     background-color: var(--azul-medio);
     padding: 1.5rem;
     border-radius: 10px;
     border: 2px solid var(--azul-claro);
+    max-width: 300px;
     width: 100%;
 }
 

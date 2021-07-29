@@ -2,7 +2,7 @@ header{
     background: var(--azul-medio);
     position: sticky;
     top: 0;
-    padding: .5rem;
+    padding: .3rem .5rem;
 }
 
 .contenedor-header{
@@ -15,23 +15,27 @@ header{
     margin: auto;
 }
 
-.contenedor-error{
-    margin-top: .3rem;
-    background-color: var(--azul-claro);
-    width: 100%;
+.contenedor-header a.logo{
+    display: flex;
+    align-items: center;
 }
 
-.contenedor-error p{
-    font-size: .8rem;
+header a.link-header{
     color: var(--gris-claro);
-    margin: .3rem 0;
+    font-size: .8rem;
+    text-decoration: none;
+    border: 1px solid var(--gris-oscuro);
+    padding: .2rem 1rem;
+    border-radius: 20px;    
 }
 
-header a{
+header a.link-header:hover{
+    transition: 1s all;
+    background: var(--celeste);
     color: var(--blanco);
-    font-size: .8rem;
+    border: 1px solid var(--celeste);
 }
 
 header img{
-    width: 2.5rem;
+    width: 3rem;
 }

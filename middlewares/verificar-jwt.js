@@ -20,7 +20,7 @@ const validarJWT = async (req, res, next) => {
 
         next()
     } catch(err){
-        console.log(err)
+        req.session.token = ""
         res.redirect("/auth/login")
     }
 }

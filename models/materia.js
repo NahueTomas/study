@@ -21,11 +21,6 @@ const MateriaSchema = Schema({
         type: String,
         required: [true, 'Error con ID de usuario']
     }
-    ,
-    cartas: {
-        type: String,
-        default: "0"
-    }
 });
 
 module.exports = model( 'Materia', MateriaSchema );
