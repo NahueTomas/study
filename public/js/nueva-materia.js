@@ -13,12 +13,10 @@ const activar = (e) => {
             logo.textContent = datos.logo
         }
     }
-    
     return
 }
 
 const cambioColor = e =>{
-    const tarjeta = document.querySelector('#tarjeta')
     tarjeta.style.transition = `1s all`
     tarjeta.style.background = `#${e.target.value}`
     tarjeta.style.boxShadow = `8px 8px #${e.target.value}50`
@@ -28,6 +26,11 @@ const cambioColor = e =>{
 
 const form = document.querySelector('form')
 const select = document.querySelector('#seleccionador-color')
+const tarjeta = document.querySelector('#tarjeta')
+
+tarjeta.style.background = `#${select.value}`
+tarjeta.style.boxShadow = `8px 8px #${select.value}50`
+select.style.background = `#${select.value}`
 
 const materia = form.materia
 const prof = form.prof

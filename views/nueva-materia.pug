@@ -6,8 +6,8 @@ include ./templates/header.pug
         h3#titulo Materia
         .carta-materia-info
             .carta-materia-info-datos
-                p.profesor#prof profesor
-                p.mazo 0 cartas
+                p.dato-uno#prof profesor
+                p.dato-dos 0 cartas
             p.item 📖
 
     .contenedor-campo
@@ -18,7 +18,6 @@ include ./templates/header.pug
             input.input-logo#logo(type="text" placeholder="logo" name="logo" required autocomplete="off")
             .caja-inferior
                 select#seleccionador-color(name="color" required)
-                    option(selected value="9F8CC8") Color 
                     each color in colores
                         option(value=`${color}` name="color")= color
                 input(type="submit" value="Crear")
