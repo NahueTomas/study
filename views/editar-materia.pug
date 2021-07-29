@@ -18,9 +18,9 @@ include ./templates/header.pug
             input.input-logo#logo(type="text" placeholder="logo" name="logo" required autocomplete="off" value=`${datos.logo}`)
             .caja-inferior
                 select#seleccionador-color(name="color" required)
-                    option(selected value=`${datos.color}`) Color
-                    each color in colores
-                        option(value=`${color}` name="color")= color
+                    option(selected value=`${datos.color}`) Anterior
+                    each color, index in colores
+                        option(value=`${color}` name="color")= `Color ${index + 1}` 
                 input#enviar(type="submit" value="Editar")
 
 script(src="/js/editar-materia.js")

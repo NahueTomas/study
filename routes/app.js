@@ -111,18 +111,9 @@ router.get('/nueva-carta/:id', validarJWT, async (req, res)=> {
         const materia = await Materia.findById(id)
         if( !materia ) res.redirect('/')
 
-        res.render('nueva-carta', { pagina: 'STUDY - crear carta', colores: colores[0].cartas, id: req.params, complemento1: "", complemento2: "incio"})
+        res.render('nueva-carta', { pagina: 'STUDY - crear carta', colores: colores[0].cartas, id, complemento1: "", complemento2: "incio"})
     } catch( err ){
         console.log(err)
-        res.redirect('/')
-    }
-})
-
-router.get('/eliminar-carta/:id', validarJWT, (req, res) => {
-    try {
-        const { id } = req.params
-        res.render('eliminar.pug', {pagina: 'Study - eliminar', complemento1: '', complemento2: 'inicio', id, tipo: "carta" })
-    } catch ( err ){
         res.redirect('/')
     }
 })
@@ -135,6 +126,15 @@ router.post('/nueva-carta', validarJWT, async (req, res)=> {
         res.redirect(`/materia/${contenedor}`)
     } catch( err ){
         console.log(err)
+        res.redirect('/')
+    }
+})
+
+router.get('/eliminar-carta/:id', validarJWT, (req, res) => {
+    try {
+        const { id } = req.params
+        res.render('eliminar.pug', {pagina: 'Study - eliminar', complemento1: '', complemento2: 'inicio', id, tipo: "carta" })
+    } catch ( err ){
         res.redirect('/')
     }
 })

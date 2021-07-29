@@ -2,7 +2,6 @@ const eliminar = async (id) => {
     try {
         await fetch(`/carta/${id}`, {
             method: 'DELETE',
-            body: id
         })
         window.location.href = '/'
     } catch(err) {

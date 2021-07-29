@@ -18,8 +18,8 @@ include ./templates/header.pug
             input.input-logo#logo(type="text" placeholder="logo" name="logo" required autocomplete="off")
             .caja-inferior
                 select#seleccionador-color(name="color" required)
-                    each color in colores
-                        option(value=`${color}` name="color")= color
+                    each color, index in colores
+                        option(value=`${color}` name="color")= `Color ${index + 1}` 
                 input(type="submit" value="Crear")
 
 script(src="/js/nueva-materia.js")

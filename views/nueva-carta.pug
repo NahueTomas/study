@@ -12,8 +12,8 @@ include ./templates/header.pug
             .caja-inferior
                 select#seleccionador-color(name="color" required)
                     option(selected value="CCFFFC") Color
-                    each color in colores
-                        option(value=`${color}` name="color")= color
+                    each color, index in colores
+                        option(value=`${color}` name="color")= `Color ${index + 1}`
                 input(type="submit" value="Crear")
 
 script(src="/js/nueva-carta.js")

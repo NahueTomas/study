@@ -5,5 +5,7 @@ include ./templates/head.pug
         h1.titulo-carta-vista= carta.titulo
         .contenedor-contenido-vista
             p.contenido-carta-vista= carta.contenido
+        a.btn-equis(href=`/eliminar-carta/${carta.id}`): img(src="/assets/svg/btn-equis.svg", alt="Botón de borrar")
+        a.btn-editar(href=`/editar-carta/${carta.id}`): img(src="/assets/svg/btn-edit.svg", alt="Botón de editar")
         if( carta.link )
             a.link-carta-vista(href=`${carta.link}`, target="_blank") mas info...
