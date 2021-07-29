@@ -14,6 +14,10 @@ router.get('/', validarJWT, async (req, res) => {
     res.render( 'app.pug',  {pagina : "STUDY", datos: materias, crear: "nueva-materia", complemento1: "auth/logout", complemento2: "logout"})
 })
 
+// ==========================
+//         MATERIA
+// ==========================
+
 router.get('/materia/:id',validarJWT, async (req, res) => {
     try{
         const materia = await Materia.findById(req.params.id)
@@ -49,6 +53,19 @@ router.get('/eliminar-materia/:id', validarJWT, (req, res) => {
     }
 })
 
+router.get('/editar-materia/:id', validarJWT, async (req, res) => {
+    try{
+        const { id } = req.params
+        const datos = await Materia.findById(id)
+        const colores = await Colore.find()
+
+        res.render('editar-materia.pug', {pagina: 'STUDY - editar', complemento1: '', complemento2: 'inicio', datos, colores: colores[0].materias})
+    } catch (err){
+        console.log(err)
+        res.redirect('/404')
+    }
+})
+
 router.delete('/materia/:id', validarJWT, async (req, res)=> {
     try{
         const { id } = req.params
@@ -59,6 +76,24 @@ router.delete('/materia/:id', validarJWT, async (req, res)=> {
         res.redirect('/')
     }
 })
+
+router.put('/materia/:id', validarJWT, async (req, res)=> {
+    try{
+        const { id } = req.params
+        const { ...editado } = req.body
+
+        await Materia.findByIdAndUpdate( id, editado )
+
+        res.redirect(`/`)
+    } catch ( err ){
+        console.log(err)
+        res.redirect('/404')
+    }
+})
+
+// ==========================
+//          CARTAS
+// ==========================
 
 router.get('/carta/:id', validarJWT, async (req, res) => {
     try{
@@ -129,6 +164,10 @@ router.put('/carta/:id', validarJWT, async (req, res)=> {
         res.redirect('/')
     }
 })
+
+// ==========================
+//         ERROR
+// ==========================
 
 router.get('/404', ( req, res ) => {
     res.render('404.pug', { pagina: "Error 404", complemento1: "", complemento2: "inicio"})
