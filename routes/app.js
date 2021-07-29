@@ -25,15 +25,6 @@ router.get('/materia/:id',validarJWT, async (req, res) => {
     }
 })
 
-router.get('/carta/:id', validarJWT, async (req, res) => {
-    try{
-        const carta = await Carta.findById(req.params.id)
-        res.render( 'carta.pug',  {pagina : "STUDY - carta", carta})
-    } catch( err ){
-        res.redirect('/404')
-    }
-})
-
 router.get('/nueva-materia', validarJWT, async (req, res)=> {
     const colores = await Colore.find()
 
@@ -48,26 +39,46 @@ router.post('/nueva-materia', validarJWT, async (req, res)=> {
     res.redirect('/')
 })
 
-// TODO: verificar que exista el contenedor
-router.get('/nueva-carta/:id', validarJWT, async (req, res)=> {
-    const colores = await Colore.find()
-    res.render('nueva-carta', { pagina: 'STUDY - crear carta', colores: colores[0].cartas, id: req.params.id, complemento1: "", complemento2: "incio"})
-})
-
-router.post('/nueva-carta', validarJWT, async (req, res)=> {
-    const { titulo, link, color, contenido, contenedor } = req.body
-
-    const nueva_carta = new Carta({titulo, link, color, contenido, contenedor})
-    nueva_carta.save()
-    
-    res.redirect(`/materia/${contenedor}`)
-})
-
 router.get('/eliminar-materia/:id', validarJWT, (req, res) => {
     try {
         const { id } = req.params
         res.render('eliminar.pug', {pagina: 'Study - eliminar', complemento1: '', complemento2: 'inicio', id, tipo: "materia" })
     } catch ( err ){
+        console.log( err )
+        res.redirect('/')
+    }
+})
+
+router.delete('/materia/:id', validarJWT, async (req, res)=> {
+    try{
+        const { id } = req.params
+        await Materia.findByIdAndDelete(id) 
+        res.redirect('/')
+    } catch( err ){
+        console.log( err )
+        res.redirect('/')
+    }
+})
+
+router.get('/carta/:id', validarJWT, async (req, res) => {
+    try{
+        const carta = await Carta.findById(req.params.id)
+        res.render( 'carta.pug',  {pagina : "STUDY - carta", carta})
+    } catch( err ){
+        res.redirect('/404')
+    }
+})
+
+router.get('/nueva-carta/:id', validarJWT, async (req, res)=> {
+    try{
+        const { id } = req.params
+        const colores = await Colore.find()
+        const materia = await Materia.findById(id)
+        if( !materia ) res.redirect('/')
+
+        res.render('nueva-carta', { pagina: 'STUDY - crear carta', colores: colores[0].cartas, id: req.params, complemento1: "", complemento2: "incio"})
+    } catch( err ){
+        console.log(err)
         res.redirect('/')
     }
 })
@@ -81,12 +92,14 @@ router.get('/eliminar-carta/:id', validarJWT, (req, res) => {
     }
 })
 
-router.delete('/materia/:id', validarJWT, async (req, res)=> {
+router.post('/nueva-carta', validarJWT, async (req, res)=> {
     try{
-        const { id } = req.params
-        await Materia.findOneAndDelete({_id: id}) 
-        res.redirect('/')
+        const { titulo, link, color, contenido, contenedor } = req.body
+        const nueva_carta = new Carta({titulo, link, color, contenido, contenedor})
+        nueva_carta.save()
+        res.redirect(`/materia/${contenedor}`)
     } catch( err ){
+        console.log(err)
         res.redirect('/')
     }
 })
@@ -96,9 +109,23 @@ router.delete('/carta/:id', validarJWT, async (req, res)=> {
         const { id } = req.params
         const { contenedor } = req.body
 
-        await Carta.findOneAndDelete({ _id: id })
+        await Carta.findByIdAndDelete(id)
         res.redirect(`/materia/${contenedor}`)
     } catch ( err ){
+        res.redirect('/')
+    }
+})
+
+router.put('/carta/:id', validarJWT, async (req, res)=> {
+    try{
+        const { id } = req.params
+        const { contenedor, ...editado } = req.body
+
+        await Carta.findByIdAndUpdate( id, editado )
+
+        res.redirect(`/materia/${contenedor}`)
+    } catch ( err ){
+        console.log(err)
         res.redirect('/')
     }
 })
