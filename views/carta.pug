@@ -9,3 +9,5 @@ include ./templates/head.pug
         a.btn-editar(href=`/editar-carta/${carta.id}`): img(src="/assets/svg/btn-edit.svg", alt="Botón de editar")
         if( carta.link )
             a.link-carta-vista(href=`${carta.link}`, target="_blank") mas info...
+
+script(src="/js/carta.js") 

@@ -36,11 +36,15 @@ router.get('/nueva-materia', validarJWT, async (req, res)=> {
 })
 
 router.post('/nueva-materia', validarJWT, async (req, res)=> {
-    const { materia, color, logo, prof } = req.body
-    const nueva_materia = new Materia({materia, color, logo, prof, usuario: req.usuarioAuth.nombre})     
-    nueva_materia.save()
+    try{
+        const { materia, color, logo, prof } = req.body
+        const nueva_materia = new Materia({materia, color, logo, prof, usuario: req.usuarioAuth.nombre})     
+        nueva_materia.save()
+        res.redirect('/')
+    } catch ( err ){
+        res.redirect('/')
+    }
 
-    res.redirect('/')
 })
 
 router.get('/eliminar-materia/:id', validarJWT, (req, res) => {
@@ -139,13 +143,23 @@ router.get('/eliminar-carta/:id', validarJWT, (req, res) => {
     }
 })
 
+router.get('/editar-carta/:id', validarJWT, async (req, res) => {
+    try {
+        const { id } = req.params
+        const carta = await Carta.findById(id)
+        const colores = await Colore.find()
+
+        res.render('editar-carta.pug', {pagina: 'Study - editar', complemento1: '', complemento2: 'inicio', id, colores: colores[0].cartas, carta })
+    } catch ( err ){
+        res.redirect('/')
+    }
+})
+
 router.delete('/carta/:id', validarJWT, async (req, res)=> {
     try{
         const { id } = req.params
-        const { contenedor } = req.body
-
-        await Carta.findByIdAndDelete(id)
-        res.redirect(`/materia/${contenedor}`)
+        const carta = await Carta.findByIdAndDelete(id)
+        res.json( {redirect: `/materia/${carta.contenedor}`} )
     } catch ( err ){
         res.redirect('/')
     }
@@ -156,9 +170,9 @@ router.put('/carta/:id', validarJWT, async (req, res)=> {
         const { id } = req.params
         const { contenedor, ...editado } = req.body
 
-        await Carta.findByIdAndUpdate( id, editado )
+        const carta = await Carta.findByIdAndUpdate( id, editado )
 
-        res.redirect(`/materia/${contenedor}`)
+        res.json( {redirect: `/materia/${carta.contenedor}`} )
     } catch ( err ){
         console.log(err)
         res.redirect('/')

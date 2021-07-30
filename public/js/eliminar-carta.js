@@ -1,9 +1,11 @@
 const eliminar = async (id) => {
     try {
-        await fetch(`/carta/${id}`, {
+        let redirect = await fetch(`/carta/${id}`, {
             method: 'DELETE',
         })
-        window.location.href = '/'
+        redirect = await redirect.json()
+
+        window.location.href = redirect.redirect
     } catch(err) {
         console.log(err)
     }
