@@ -21,8 +21,18 @@
 }
 
 .btn-equis{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+}
+
+.btn-editar{
     display: inline-block;
-    margin-right: .8rem;
+    position: absolute;
+    bottom: 15px;
+    left: 50px;
+    display: flex;
 }
 
 .btn-equis img{
@@ -30,5 +40,5 @@
 }
 
 .btn-editar img{
-    width: 1rem;
+    width: 1.1rem;
 }
