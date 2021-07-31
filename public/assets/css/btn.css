@@ -14,31 +14,41 @@
 }
 
 .btn-opciones{
-    width: .5rem;
+    height: 2rem;
     position: absolute;
     top: 10px;
     right: 20px;
 }
 
-.btn-equis{
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    display: flex;
-}
-
-.btn-editar{
-    display: inline-block;
-    position: absolute;
-    bottom: 15px;
-    left: 50px;
-    display: flex;
-}
-
 .btn-equis img{
-    width: 1rem;
+    width: 1.1rem;
 }
 
 .btn-editar img{
+    width: 1.2rem;
+}
+
+.btn-atras img{
     width: 1.1rem;
+}
+
+a.btn-atras-materia{
+    bottom: 30px;
+    left: 30px;
+    border-radius: 15px;
+    background: var(--blanco);
+    position: fixed;
+    padding: .2rem 1.3rem;
+    border: none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: var(--azul-medio);
+    text-decoration: none;
+}
+
+.btn-atras-materia img{
+    height: 1.5rem;
+    margin: auto;
+    vertical-align: top;
 }

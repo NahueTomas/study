@@ -20,6 +20,10 @@ const MateriaSchema = Schema({
     usuario:{
         type: String,
         required: [true, 'Error con ID de usuario']
+    },
+    cartas:{
+        type: String,
+        default: "0"
     }
 });
 

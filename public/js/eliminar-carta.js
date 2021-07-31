@@ -2,6 +2,7 @@ const eliminar = async (id) => {
     try {
         let redirect = await fetch(`/carta/${id}`, {
             method: 'DELETE',
+            headers: {'Content-Type': 'application/json'}
         })
         redirect = await redirect.json()
 

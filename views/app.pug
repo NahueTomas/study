@@ -7,8 +7,8 @@ include ./templates/header.pug
             h3= dato.materia
             .carta-materia-info
                 .carta-materia-info-datos
-                    p.dato-uno= dato.prof
-                    p.dato-dos vacío
+                    p.dato-uno= `${dato.prof}`
+                    p.dato-dos= `${dato.cartas} carta(s)`
                 p.item= dato.logo
     else
         .contenedor

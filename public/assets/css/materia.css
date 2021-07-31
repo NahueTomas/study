@@ -8,9 +8,8 @@
 
 .contenedor-header-materia h1{
     font-size: 2rem;
-    margin: 0;
+    margin: 1rem 0;
     padding: .5rem 0rem;
-    margin-bottom: 1rem;
 }
 
 .contenedor-header-info{

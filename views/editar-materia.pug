@@ -7,15 +7,15 @@ include ./templates/header.pug
             .carta-materia-info
                 .carta-materia-info-datos
                     p.dato-uno#prof= datos.prof
-                    p.dato-dos 0 cartas
+                    p.dato-dos= `${datos.cartas} carta(s)`
                 p.item= datos.logo
     .contenedor-campo
-        h3.titulo-contenedor Editar materia
+        h3.titulo-contenedor Editar Materia
         form.formulario-nuevo(action=`/materia/${datos.id}` method="PUT")
-            input(type="text" placeholder="Materia: " name="materia" required autocomplete="off" value=`${datos.materia}` ) 
-            input(type="text" placeholder="Prof (opcional)" name="prof" autocomplete="off" value=`${datos.prof}`)
+            input(type="text" placeholder="Título:" name="materia" required autocomplete="off" value=`${datos.materia}` ) 
+            input(type="text" placeholder="Prof. (opcional)" name="prof" autocomplete="off" value=`${datos.prof}`)
             input(type="hidden" name="id" value=`${datos.id}`)
-            input.input-logo#logo(type="text" placeholder="logo" name="logo" required autocomplete="off" value=`${datos.logo}`)
+            input.input-logo#logo(max-length="8" type="text" placeholder="Emoji :D" name="logo" required autocomplete="off" value=`${datos.logo}`)
             .caja-inferior
                 select#seleccionador-color(name="color" required)
                     option(selected value=`${datos.color}`) Anterior

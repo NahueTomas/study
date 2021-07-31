@@ -39,12 +39,11 @@ router.post('/nueva-materia', validarJWT, async (req, res)=> {
     try{
         const { materia, color, logo, prof } = req.body
         const nueva_materia = new Materia({materia, color, logo, prof, usuario: req.usuarioAuth.nombre})     
-        nueva_materia.save()
+        await nueva_materia.save()
         res.redirect('/')
     } catch ( err ){
         res.redirect('/')
     }
-
 })
 
 router.get('/eliminar-materia/:id', validarJWT, (req, res) => {
@@ -73,7 +72,8 @@ router.get('/editar-materia/:id', validarJWT, async (req, res) => {
 router.delete('/materia/:id', validarJWT, async (req, res)=> {
     try{
         const { id } = req.params
-        await Materia.findByIdAndDelete(id) 
+        await Materia.findByIdAndDelete(id)
+
         res.redirect('/')
     } catch( err ){
         console.log( err )
@@ -126,7 +126,12 @@ router.post('/nueva-carta', validarJWT, async (req, res)=> {
     try{
         const { titulo, link, color, contenido, contenedor } = req.body
         const nueva_carta = new Carta({titulo, link, color, contenido, contenedor})
-        nueva_carta.save()
+        await nueva_carta.save()
+        
+        let cartas = await Carta.find({contenedor})
+        const obj = {cartas: String(cartas.length)}
+        await Materia.findByIdAndUpdate(contenedor, obj)
+        
         res.redirect(`/materia/${contenedor}`)
     } catch( err ){
         console.log(err)
@@ -159,6 +164,11 @@ router.delete('/carta/:id', validarJWT, async (req, res)=> {
     try{
         const { id } = req.params
         const carta = await Carta.findByIdAndDelete(id)
+
+        let cartas = await Carta.find({contenedor: carta.contenedor})
+        const obj = { cartas: String(cartas.length)}
+        await Materia.findByIdAndUpdate({_id: carta.contenedor}, obj)   
+
         res.json( {redirect: `/materia/${carta.contenedor}`} )
     } catch ( err ){
         res.redirect('/')

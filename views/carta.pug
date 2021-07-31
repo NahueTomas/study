@@ -2,11 +2,14 @@ include ./templates/head.pug
 
 .contenedor-centrador
     .contenedor-carta-vista(style=`background-color: #${carta.color};`)
+
         h1.titulo-carta-vista= carta.titulo
         .contenedor-contenido-vista
             p.contenido-carta-vista= carta.contenido
-        a.btn-equis(href=`/eliminar-carta/${carta.id}`): img(src="/assets/svg/btn-equis.svg", alt="Botón de borrar")
-        a.btn-editar(href=`/editar-carta/${carta.id}`): img(src="/assets/svg/btn-edit.svg", alt="Botón de editar")
+        .contenedor-opciones-carta
+            a.btn-atras(href=`/materia/${carta.contenedor}`): img(src="/assets/svg/btn-atras.svg", alt="Botón de atrás")
+            a.btn-editar(href=`/editar-carta/${carta.id}`): img(src="/assets/svg/btn-edit.svg", alt="Botón de editar")
+            a.btn-equis(href=`/eliminar-carta/${carta.id}`): img(src="/assets/svg/btn-equis.svg", alt="Botón de borrar")
         if( carta.link )
             a.link-carta-vista(href=`${carta.link}`, target="_blank") mas info...
 
