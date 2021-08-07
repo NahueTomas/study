@@ -20,6 +20,10 @@
     right: 20px;
 }
 
+.btn-opciones:hover{
+    cursor: pointer;
+}
+
 .btn-equis img{
     width: 1.1rem;
 }

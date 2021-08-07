@@ -15,6 +15,18 @@ router.get('/', validarJWT, async (req, res) => {
 })
 
 // ==========================
+//       MODO PRUEBA
+// ==========================
+router.get('/prueba/:id', validarJWT, async (req, res) => {
+    try{
+        const cartas = await Carta.find({contenedor: req.params.id})
+        res.json({cartas, id: req.params.id})
+    } catch( err ){
+        res.redirect('/404')
+    }
+})
+
+// ==========================
 //         MATERIA
 // ==========================
 
@@ -22,7 +34,7 @@ router.get('/materia/:id',validarJWT, async (req, res) => {
     try{
         const materia = await Materia.findById(req.params.id)
         const cartas = await Carta.find({contenedor: req.params.id})
-        res.render( 'materia.pug',  {pagina : "STUDY - materia", datos: materia, cartas,id: req.params.id, crear: `nueva-carta/${materia._id}`})
+        res.render( 'materia.pug',  {pagina : "STUDY - materia", datos: materia, cartas, id: req.params.id, crear: `nueva-carta/${materia._id}`})
     }
     catch( err ){
         res.redirect('/404')

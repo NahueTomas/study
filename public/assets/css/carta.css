@@ -1,7 +1,5 @@
 .contenedor-centrador{
-    display: flex;
     height: 100%;
-    align-items: center;
     padding: 1rem;
 }
 
@@ -18,19 +16,40 @@
 .titulo-carta-vista{
     font-size: 2rem;
     margin: 0rem;
+    margin-top: 1rem;
     text-align: center;
-    color: rgba(0, 0, 0, 0.700);
+    color: rgba(0, 0, 0, 0.850);
 }
 
 .contenedor-contenido-vista{
-    margin: 3rem 0rem;
+    margin: 2rem 0rem;
+}
+
+.contenedor-contenido-vista hr{
+    background-color: rgba(0, 0, 0, 0.150);
+    border: none;
+    height: 1px;
+}
+
+.contenedor-contenido-vista li{
+    color: rgba(0, 0, 0, 0.600);
+    font-size: .95rem;
+    margin: .4rem 0rem;
+    list-style: circle;
+}
+
+.contenedor-contenido-vista h3{
+    font-size: 1.2rem;
+    margin: .4rem 0rem;
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.800);
 }
 
 p.contenido-carta-vista{
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: rgba(0, 0, 0, 0.700);
-    margin: 1rem 0rem;
-    display: block;
+    margin: .5rem 0rem;
+    font-style: italic;
 }
 
 a.link-carta-vista{

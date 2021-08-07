@@ -35,6 +35,7 @@ body, html{
     margin: 0;
     width: 100%;
     min-height: 100%;
+    position: relative;
 }
 
 body{
@@ -84,4 +85,8 @@ img.not-found{
     width: 5rem;
     margin: 2rem auto;
     display: block;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
