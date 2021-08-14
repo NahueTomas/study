@@ -15,11 +15,12 @@ include ./templates/head.pug
                 a(href=`/editar-materia/${datos.id}`) Editar
                 a(href=`/eliminar-materia/${datos.id}`) Eliminar
 
-.contenedor
-    #btn-modo-prueba()
-        img(src="/assets/svg/decoracion-btn-prueba.svg", alt="Logo del modo prueba")
-        p Modo prueba
-        img#flecha(src="/assets/svg/btn-prueba.svg" alt="Logo de iniciar prueba")
+- if (cartas != "")
+    .contenedor
+        #btn-modo-prueba()
+            img(src="/assets/svg/decoracion-btn-prueba.svg", alt="Logo del modo prueba")
+            p Modo prueba
+            img#flecha(src="/assets/svg/btn-prueba.svg" alt="Logo de iniciar prueba")
 
 .contenedor
     .contenedor-indide

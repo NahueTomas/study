@@ -24,16 +24,12 @@
     cursor: pointer;
 }
 
-.btn-equis img{
-    width: 1.1rem;
+.btn-carta{
+    height: 100%;
 }
 
-.btn-editar img{
-    width: 1.2rem;
-}
-
-.btn-atras img{
-    width: 1.1rem;
+.btn-carta img{
+    height: 100%;
 }
 
 a.btn-atras-materia{
@@ -49,10 +45,4 @@ a.btn-atras-materia{
     font-size: 1.3rem;
     color: var(--azul-medio);
     text-decoration: none;
-}
-
-.btn-atras-materia img{
-    height: 1.5rem;
-    margin: auto;
-    vertical-align: top;
 }

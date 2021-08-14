@@ -10,7 +10,7 @@
     border-radius: 5px;
     padding: 1rem;
     position: relative;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.150);
+    box-shadow: 5px 5px var(--negro-alpha);
 }
 
 .titulo-carta-vista{
@@ -18,7 +18,7 @@
     margin: 0rem;
     margin-top: 1rem;
     text-align: center;
-    color: rgba(0, 0, 0, 0.850);
+    color: var(--azul-oscuro);
 }
 
 .contenedor-contenido-vista{
@@ -26,28 +26,34 @@
 }
 
 .contenedor-contenido-vista hr{
-    background-color: rgba(0, 0, 0, 0.150);
+    background-color: var(--negro-alpha);
     border: none;
     height: 1px;
 }
 
-.contenedor-contenido-vista li{
-    color: rgba(0, 0, 0, 0.600);
+.contenedor-contenido-vista li.lista-chica{
+    color: var(--negro-medio);
     font-size: .95rem;
     margin: .4rem 0rem;
     list-style: circle;
+}
+
+.contenedor-contenido-vista li.lista-grande{
+    color: var(--negro-medio);
+    font-size: 1.1rem;
+    margin: .4rem 0rem;
 }
 
 .contenedor-contenido-vista h3{
     font-size: 1.2rem;
     margin: .4rem 0rem;
     text-decoration: underline;
-    color: rgba(0, 0, 0, 0.800);
+    color: var(--negro-medio);
 }
 
 p.contenido-carta-vista{
     font-size: 1rem;
-    color: rgba(0, 0, 0, 0.700);
+    color: var(--negro-medio);
     margin: .5rem 0rem;
     font-style: italic;
 }
@@ -62,7 +68,47 @@ a.link-carta-vista{
 
 .contenedor-opciones-carta{
     display: flex;
-    width: 80px;
+    width: 100px;
     justify-content: space-between;
     align-items: center;
+    height: 20px;
+}
+
+.formula{
+    text-align: center;
+    padding: .2rem;
+    border-radius: 5px;
+    color: var(--azul);
+    font-weight: bolder;
+    border: 1px solid var(--azul);
+    box-shadow: 3px 3px var(--azul);
+    font-size: .8rem;
+    position: relative;
+}
+
+.formula::after{
+    content: 'f';
+    position: absolute;
+    color: var(--azul);
+    left: 5px;
+    top: -4px;
+    font-size: 1.3rem;
+}
+
+span.tapado{
+    display: inline-block;
+    background: var(--azul);
+    padding: 0rem .25rem;
+    border-radius: 5px;
+    color: transparent;
+    text-align: center;
+    border: 1px solid transparent;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.mostrar-tapado{
+    color: var(--azul) !important;
+    border: 1px solid var(--azul) !important;
+    background: transparent !important;
 }

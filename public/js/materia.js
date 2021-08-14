@@ -116,21 +116,21 @@ const pintarHTML = cartas =>{
     const $IMG_salir = document.createElement('img')
     $IMG_salir.src = "/assets/svg/btn-salir.svg"
     $link_salir.appendChild($IMG_salir)
-    $link_salir.classList.add('btn-atras')
+    $link_salir.classList.add('btn-carta')
 
     const $link_atras = document.createElement('a') 
     $link_atras.href = '#'
     const $IMG_atras = document.createElement('img')
     $IMG_atras.src = "/assets/svg/btn-atras.svg"
     $link_atras.appendChild($IMG_atras)
-    $link_atras.classList.add('btn-atras')
+    $link_atras.classList.add('btn-carta')
 
     const $link_adelante = document.createElement('a') 
     $link_adelante.href = '#'
     const $IMG_adelante = document.createElement('img')
     $IMG_adelante.src = "/assets/svg/btn-adelante.svg"
     $link_adelante.appendChild($IMG_adelante)
-    $link_adelante.classList.add('btn-atras')
+    $link_adelante.classList.add('btn-carta')
 
     $contenedor_opciones.appendChild($link_salir)
     $contenedor_opciones.appendChild($link_atras)
@@ -179,6 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn_opciones = document.querySelector('.btn-opciones')
     const btn_modo_prueba = document.querySelector('#btn-modo-prueba')
 
+    if(!!btn_modo_prueba) {btn_modo_prueba.addEventListener('click', modo_prueba)}
     btn_opciones.addEventListener('click', opciones)
-    btn_modo_prueba.addEventListener('click', modo_prueba)
 })

@@ -7,9 +7,9 @@ include ./templates/head.pug
         .contenedor-contenido-vista
             p.contenido-carta-vista= carta.contenido
         .contenedor-opciones-carta
-            a.btn-atras(href=`/materia/${carta.contenedor}`): img(src="/assets/svg/btn-atras.svg", alt="Botón de atrás")
-            a.btn-editar(href=`/editar-carta/${carta.id}`): img(src="/assets/svg/btn-edit.svg", alt="Botón de editar")
-            a.btn-equis(href=`/eliminar-carta/${carta.id}`): img(src="/assets/svg/btn-equis.svg", alt="Botón de borrar")
+            a.btn-carta(href=`/materia/${carta.contenedor}`): img(src="/assets/svg/btn-atras.svg", alt="Botón de atrás")
+            a.btn-carta(href=`/editar-carta/${carta.id}`): img(src="/assets/svg/btn-edit.svg", alt="Botón de editar")
+            a.btn-carta(href=`/eliminar-carta/${carta.id}`): img(src="/assets/svg/btn-equis.svg", alt="Botón de borrar")
         if( carta.link )
             a.link-carta-vista(href=`${carta.link}`, target="_blank") mas info...
 

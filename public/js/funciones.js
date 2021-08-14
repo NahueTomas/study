@@ -3,26 +3,49 @@ export const traductor = (contenedor, contenido) => {
     contenido.remove()
 
     arrayContenido.forEach( parrafo => {
+        
+        let $linea
+
         if( parrafo.trim() == ""){
-            const $br = document.createElement('br')
-            contenedor.appendChild($br)
+            $linea = document.createElement('br')
         } else if ( parrafo.trim() == "="){
-            const $hr = document.createElement('hr')
-            contenedor.appendChild($hr)
+            $linea = document.createElement('hr')
         } else if (parrafo.trim().split('')[0] == "-"){
-            const $li = document.createElement('li')
-            $li.textContent = parrafo.slice(2)
-            contenedor.appendChild($li)
+            $linea = document.createElement('li')
+            $linea.classList.add('lista-chica')
+            $linea.textContent = parrafo.slice(1)
+        } else if (parrafo.trim().split('')[0] == "+"){
+            $linea = document.createElement('li')
+            $linea.classList.add('lista-grande')
+            $linea.textContent = parrafo.slice(1)
         } else if(parrafo.trim().split('')[0] == "#"){
-            const $h3 = document.createElement('h3')
-            $h3.textContent = parrafo.slice(1)
-            contenedor.appendChild($h3)
+            $linea = document.createElement('h3')
+            $linea.textContent = parrafo.slice(1)
+        } else if(parrafo.trim().split('')[0] == "{"){
+            $linea = document.createElement('div')
+            $linea.classList.add('formula')
+            $linea.textContent = parrafo.slice(1)
+        } else{
+            $linea = document.createElement('p')
+            $linea.classList.add('contenido-carta-vista')
+            $linea.textContent = parrafo
         }
-        else{
-            const $parrafo = document.createElement('p')
-            $parrafo.classList.add('contenido-carta-vista')
-            $parrafo.textContent = parrafo
-            contenedor.appendChild($parrafo)
+        
+        if(parrafo.trim().includes("&")){            
+            $linea = document.createElement('p')
+            const arrayTexto = parrafo.split('&')
+            const contador = arrayTexto.length - 1
+            $linea.innerHTML = ""
+
+            for (let i = 0; i < contador; i++ ){
+                if( i % 2 != 0 ){
+                    $linea.innerHTML += `<span class="tapado">${arrayTexto[i]}</span>`
+                }else{
+                    $linea.innerHTML += `${arrayTexto[i]}`
+                }
+            }
         }
+        
+        contenedor.appendChild($linea)
     })
 }
