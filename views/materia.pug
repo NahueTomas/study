@@ -15,7 +15,7 @@ include ./templates/head.pug
                 a(href=`/editar-materia/${datos.id}`) Editar
                 a(href=`/eliminar-materia/${datos.id}`) Eliminar
 
-- if (cartas != "")
+- if (cartas == "HOLA")
     .contenedor
         #btn-modo-prueba()
             img(src="/assets/svg/decoracion-btn-prueba.svg", alt="Logo del modo prueba")

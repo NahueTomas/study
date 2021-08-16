@@ -33,14 +33,14 @@
 
 .contenedor-contenido-vista li.lista-chica{
     color: var(--negro-medio);
-    font-size: .95rem;
+    font-size: .9rem;
     margin: .4rem 0rem;
     list-style: circle;
 }
 
 .contenedor-contenido-vista li.lista-grande{
     color: var(--negro-medio);
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: .4rem 0rem;
 }
 
@@ -87,21 +87,21 @@ a.link-carta-vista{
 }
 
 .formula::after{
-    content: 'f';
+    content: 'f(x)';
     position: absolute;
     color: var(--azul);
-    left: 5px;
-    top: -4px;
-    font-size: 1.3rem;
+    left: 4px;
+    bottom: 9px;
+    font-size: .7rem;
 }
 
 span.tapado{
-    display: inline-block;
+    display: inline;
+    padding: 0rem .2rem;
+    line-height: 1.7rem;
     background: var(--azul);
-    padding: 0rem .25rem;
-    border-radius: 5px;
+    border-radius: 2px;
     color: transparent;
-    text-align: center;
     border: 1px solid transparent;
     font-weight: bolder;
     cursor: pointer;
