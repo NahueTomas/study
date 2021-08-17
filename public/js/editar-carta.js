@@ -1,6 +1,6 @@
 const activar = e => {
-    form.style.transition = `1s all`
-    form.style.border = `5px solid #${e.target.value}`
+    form.style.transition = `2s all`
+    form.style.border = `2px solid #${e.target.value}`
     select.style.background = `#${e.target.value}`
 }
 
@@ -31,7 +31,7 @@ const editar = async e => {
 const form = document.querySelector('form')
 const select = document.querySelector('#seleccionador-color')
 select.style.background = `#${select.value}`
-form.style.border = `5px solid #${select.value}`
+form.style.border = `2px solid #${select.value}`
 
 select.addEventListener('change', activar)
 form.addEventListener('submit', editar)

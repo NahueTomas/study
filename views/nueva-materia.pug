@@ -12,7 +12,7 @@ include ./templates/header.pug
 
     .contenedor-campo
         h3.titulo-contenedor Nueva Materia
-        form.formulario-nuevo(action="/nueva-materia" method="POST")
+        form.formulario-materia(action="/nueva-materia" method="POST")
             input(type="text" placeholder="Título: " name="materia" required autocomplete="off")
             input(type="text" placeholder="Prof. (opcional)" name="prof" autocomplete="off")
             input.input-logo#logo(max-length="8" type="text" placeholder="Emoji :D" name="logo" required autocomplete="off")

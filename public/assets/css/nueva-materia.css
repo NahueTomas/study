@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-.formulario-nuevo{
+.formulario-materia{
     background-color: var(--azul-medio);
     padding: 1rem;
     border-radius: 10px;
@@ -10,21 +10,20 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 100%;
 }
 
-.formulario-nuevo input[type="text"]{
+.formulario-materia input[type="text"]{
     background: none;
     border-bottom: 1px solid var(--gris-claro);
     margin: .5rem;
     color: var(--blanco);
 }
 
-.formulario-nuevo input[type="text"]:focus{
+.formulario-materia input[type="text"]:focus{
     border-bottom: 1px solid var(--celeste);
 }
 
-.formulario-nuevo input{
+.formulario-materia input{
     border: none;
     outline: none;
 }

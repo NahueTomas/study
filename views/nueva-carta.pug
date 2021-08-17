@@ -4,11 +4,11 @@ include ./templates/header.pug
 .contenedor 
     .contenedor-campo 
         h3.titulo-contenedor Nueva carta
-        form.formulario-nuevo(action="/nueva-carta", method="POST")
+        form.formulario-carta(action="/nueva-carta", method="POST")
             input(type="hidden", name="contenedor", value=`${id}`)
-            input.titulo-carta-form(type="text", name="titulo" placeholder="Título:" autocomplete="off" required)
-            input.link-carta-form(style="color: var(--celeste);",type="text", name="link", placeholder="www.wikipedia.org" autocomplete="off")
+            input.titulo-carta-form(type="text", name="titulo" placeholder="Título" autocomplete="off" required)
             textarea.contenido-carta-form(name="contenido" placeholder="Contenido:" autocomplete="off" required)
+            input.link-carta-form(type="text", name="link", placeholder="www.wikipedia.org" autocomplete="off")
             .caja-inferior
                 select#seleccionador-color(name="color" required)
                     option(selected value="CCFFFC") Color

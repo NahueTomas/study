@@ -1,19 +1,64 @@
 .contenido-carta-form{
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: none;
+
     min-width: 99%;
     max-width: 99%;
-    margin: auto;
-    background: none;
-    border: none;
-    outline: none;
-    color: var(--blanco);
-    margin-top: 3rem;
     min-height: 200px;
+
+    padding: .5rem;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    
+    font-size: .9rem;
+    line-height: 1.9rem;
+    font-weight: lighter;
+    color: var(--gris-claro);
+}
+
+.contenido-carta-form:focus{
+    border: 1px solid var(--celeste);
+}
+
+.formulario-carta{
+    padding: 1rem;
+    border-radius: 10px;
+    background: var(--azul-medio);
+    border: 1px solid var(--azul-claro);
+}
+
+.formulario-carta input[type="submit"]{
+    border: none;
 }
 
 .titulo-carta-form{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--gris-claro);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.titulo-carta-form:focus{
+    border-bottom: 1px solid var(--celeste);
 }
 
 .link-carta-form{
     font-size: .8rem;
+    margin-top: 2rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--gris-claro);
+    background: none;
+    color: var(--celeste);
+}
+
+.link-carta-form:focus{
+    border-bottom: 1px solid var(--celeste);
 }
