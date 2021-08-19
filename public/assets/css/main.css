@@ -5,8 +5,8 @@
 @import url('./btn.css');
 @import url('./materia.css');
 @import url('./carta.css');
-@import url('./nueva-materia.css');
-@import url('./nueva-carta.css');
+@import url('./materia-form.css');
+@import url('./carta-form.css');
 @import url('./eliminar.css');
 
 :root{

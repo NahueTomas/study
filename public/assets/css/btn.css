@@ -11,6 +11,7 @@
     font-size: 1.3rem;
     color: var(--azul-medio);
     text-decoration: none;
+    z-index: 999;
 }
 
 .btn-opciones{
@@ -45,4 +46,5 @@ a.btn-atras-materia{
     font-size: 1.3rem;
     color: var(--azul-medio);
     text-decoration: none;
+    z-index: 999;
 }

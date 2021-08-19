@@ -70,6 +70,7 @@
     display: inline-block;
     border-radius: 5px;
     box-shadow: 3px 3px 10px #00000050;
+    position: relative;
 }
 
 .scroll{
@@ -79,7 +80,20 @@
 
 .carta h4{
     color: var(--azul-claro);
+    padding: 0rem .8rem;
     font-weight: bolder;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.carta img{
+    position: absolute;
+    bottom: 1rem;
+    right: 18px;
+    z-index: 1;
 }
 
 .opciones{

@@ -2,7 +2,6 @@ include ./templates/head.pug
 
 .main-container
     .contenedor-header-materia(style=`background-color: #${datos.color}; box-shadow: 8px 0px #${datos.color}50;`)
-        a(href="/").btn-atras-materia <
         img.btn-opciones(src="/assets/svg/btn-opciones.svg")
         h1= datos.materia
         .contenedor-header-info
@@ -15,7 +14,7 @@ include ./templates/head.pug
                 a(href=`/editar-materia/${datos.id}`) Editar
                 a(href=`/eliminar-materia/${datos.id}`) Eliminar
 
-- if (cartas == "HOLA")
+- if (cartas == "DESACTIVADO")
     .contenedor
         #btn-modo-prueba()
             img(src="/assets/svg/decoracion-btn-prueba.svg", alt="Logo del modo prueba")
@@ -31,6 +30,8 @@ include ./templates/head.pug
             else
                 h3.error No hay cartas creadas
         h3.titulo-contenedor Cartas:
+    
+    a(href="/").btn-atras-materia <
     include ./templates/boton.pug
 
 .contenedor-cartas
@@ -39,7 +40,7 @@ include ./templates/head.pug
             .scroll(style=`width:${cartas.length * 156.3}px;`)
                 each carta in cartas
                     a.carta(href=`/carta/${carta.id}` style=`background-color: #${carta.color};`)
-                        h4= carta.titulo
+                        h4(style=`background: #${carta.color};`)= carta.titulo
                         img(src="/assets/svg/relleno-cartas.svg", alt="lineas decorativas")
 
 script(src="/js/materia.js" type="module")
