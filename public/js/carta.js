@@ -29,7 +29,7 @@ const speakerStartStop = e => {
         speak.text = texto
         speak.rate = .8
         speak.volume = .8;
-        speak.pitch = .2;
+        speak.pitch = 1;
         speechSynthesis.speak(speak)
 
         speak.addEventListener('end', () => {
