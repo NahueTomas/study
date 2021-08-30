@@ -10,7 +10,7 @@
 @import url('./eliminar.css');
 
 :root{
-    --rojo: rgb(242, 77, 77);
+    --rojo: #f24d4d;
 
     --azul: #334257;
     --azul-oscuro: #1E2228;

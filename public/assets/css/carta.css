@@ -16,7 +16,7 @@
 .titulo-carta-vista{
     font-size: 2rem;
     margin: 0rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     text-align: center;
     color: var(--azul-oscuro);
 }
@@ -55,15 +55,18 @@ p.contenido-carta-vista{
     font-size: 1rem;
     color: var(--negro-medio);
     margin: .5rem 0rem;
-    font-style: italic;
+}
+
+.contenedor-acciones-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 a.link-carta-vista{
     color: var(--celeste);
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
     font-style: italic;
+    font-size: .95rem;
 }
 
 .contenedor-opciones-carta{
@@ -111,4 +114,21 @@ span.tapado{
     color: var(--azul) !important;
     border: 1px solid var(--azul) !important;
     background: transparent !important;
+}
+
+.btn-sonido{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border: 1px solid var(--azul-oscuro);
+    padding: .5rem;
+    border-radius: 0px 0px 10px 0px;
+    min-width: 45px;
+
+}
+
+.btn-sonido img{
+    height: 25px;
 }
