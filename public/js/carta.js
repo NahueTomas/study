@@ -34,10 +34,8 @@ const speakerStartStop = e => {
 
         speak.addEventListener('end', () => {
             $btn_sonido.childNodes[0].src = img_sonido_activar
-            $btn_sonido.classList.toggle('speak-activado')
         })
     } else{
-        $btn_sonido.childNodes[0].src = img_sonido_activar
         speechSynthesis.cancel()
     }
 }
