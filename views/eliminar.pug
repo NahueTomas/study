@@ -1,10 +1,11 @@
 include ./templates/head.pug
 include ./templates/header.pug
 
-form.form-eliminar
-    h1 Estás segur@?
-    h2 Una vez eliminado no hay vuelta a atras
-    input(type="hidden" value=`${id}` name="id")
-    input#enviar(type="submit" value="Eliminar")
+body
+    form.form-eliminar
+        h1 Estás segur@?
+        h2 Una vez eliminado no hay vuelta a atras
+        input(type="hidden" value=`${id}` name="id")
+        input#enviar(type="submit" value="Eliminar")
 
-script(src=`/js/eliminar-${tipo}.js`)
+    script(src=`/js/eliminar-${tipo}.js`)

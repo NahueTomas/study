@@ -1,19 +1,20 @@
 include ./templates/head.pug
 include ./templates/header.pug
 
-.contenedor 
-    .contenedor-campo 
-        h3.titulo-contenedor Editar carta
-        form.formulario-carta
-            input(type="hidden", name="contenedor", value=`${id}`)
-            input.titulo-carta-form(type="text", name="titulo" placeholder="Título" autocomplete="off" value=`${carta.titulo}` required)
-            textarea.contenido-carta-form(name="contenido" placeholder="Contenido:" autocomplete="off" required)= carta.contenido
-            input.link-carta-form(type="text", name="link", value=`${carta.link}`,placeholder="www.wikipedia.org" autocomplete="off")
-            .caja-inferior
-                select#seleccionador-color(name="color" required)
-                    option(selected value=`${carta.color}`) Anterior
-                    each color, index in colores
-                        option(value=`${color}` name="color")= `Color ${index + 1}`
-                input(type="submit" value="Editar")
+body
+    .contenedor 
+        .contenedor-campo 
+            h3.titulo-contenedor Editar carta
+            form.formulario-carta
+                input(type="hidden", name="contenedor", value=`${id}`)
+                input.titulo-carta-form(type="text", name="titulo" placeholder="Título" autocomplete="off" value=`${carta.titulo}` required)
+                textarea.contenido-carta-form(name="contenido" placeholder="Contenido:" autocomplete="off" required)= carta.contenido
+                input.link-carta-form(type="text", name="link", value=`${carta.link}`,placeholder="www.wikipedia.org" autocomplete="off")
+                .caja-inferior
+                    select#seleccionador-color(name="color" required)
+                        option(selected value=`${carta.color}`) Anterior
+                        each color, index in colores
+                            option(value=`${color}` name="color")= `Color ${index + 1}`
+                    input(type="submit" value="Editar")
 
-script(src="/js/editar-carta.js")
+    script(src="/js/editar-carta.js")

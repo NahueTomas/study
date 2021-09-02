@@ -1,25 +1,26 @@
 include ./templates/head.pug
 include ./templates/header.pug
 
-.contenedor
-    .carta-materia#tarjeta
-        h3#titulo Materia
-        .carta-materia-info
-            .carta-materia-info-datos
-                p.dato-uno#prof Profesor
-                p.dato-dos 0 cartas
-            p.item 📖
+body
+    .contenedor
+        .carta-materia#tarjeta
+            h3#titulo Materia
+            .carta-materia-info
+                .carta-materia-info-datos
+                    p.dato-uno#prof Profesor
+                    p.dato-dos 0 cartas
+                p.item 📖
 
-    .contenedor-campo
-        h3.titulo-contenedor Nueva Materia
-        form.formulario-materia(action="/nueva-materia" method="POST")
-            input(type="text" placeholder="Título: " name="materia" required autocomplete="off")
-            input(type="text" placeholder="Prof. (opcional)" name="prof" autocomplete="off")
-            input.input-logo#logo(max-length="8" type="text" placeholder="Emoji :D" name="logo" required autocomplete="off")
-            .caja-inferior
-                select#seleccionador-color(name="color" required)
-                    each color, index in colores
-                        option(value=`${color}` name="color")= `Color ${index + 1}` 
-                input(type="submit" value="Crear")
+        .contenedor-campo
+            h3.titulo-contenedor Nueva Materia
+            form.formulario-materia(action="/nueva-materia" method="POST")
+                input(type="text" placeholder="Título: " name="materia" required autocomplete="off")
+                input(type="text" placeholder="Prof. (opcional)" name="prof" autocomplete="off")
+                input.input-logo#logo(max-length="8" type="text" placeholder="Emoji :D" name="logo" required autocomplete="off")
+                .caja-inferior
+                    select#seleccionador-color(name="color" required)
+                        each color, index in colores
+                            option(value=`${color}` name="color")= `Color ${index + 1}` 
+                    input(type="submit" value="Crear")
 
-script(src="/js/nueva-materia.js")
+    script(src="/js/nueva-materia.js")

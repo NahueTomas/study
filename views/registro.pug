@@ -1,10 +1,11 @@
 include ./templates/head.pug
 include ./templates/header.pug
 
-.contenedor-global
-    form.formulario-login(method="post" action="/auth/registro")
-        h2 Registrarse
-        .contenedor-login
-            input(type="text", placeholder="Nombre de usuario" autocomplete="off" name="nombre")
-            input(type="password", placeholder="Contraseña" name="clave")
-            input(type="submit", value="Nuevo usuario")
+body
+    .contenedor-global
+        form.formulario-login(method="post" action="/auth/registro")
+            h2 Registrarse
+            .contenedor-login
+                input(type="text", placeholder="Nombre de usuario" autocomplete="off" name="nombre")
+                input(type="password", placeholder="Contraseña" name="clave")
+                input(type="submit", value="Nuevo usuario")
