@@ -65,3 +65,30 @@ h2.titulo-presentacion{
 section{
     margin: 30px 0px !important;
 }
+
+footer{
+    background-color: var(--azul-oscuro);
+    padding: 10px;
+    margin: 0px;
+}
+
+footer .parrafo-footer{
+    color: var(--blanco);
+    font-size: 12px;
+    text-align: end;
+    margin-top: 30px;
+}
+
+footer .contenedor-redes{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer a{
+    display: inline-block;
+}
+
+body{
+    padding: 0px;
+}
