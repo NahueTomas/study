@@ -12,7 +12,7 @@
     padding: 1.5rem;
     border-radius: 10px;
     border: 1px solid var(--azul-claro);
-    max-width: 450px;
+    max-width: 320px;
     width: 95%;
 }
 
@@ -22,8 +22,9 @@
     margin-top: 0px;
     margin-bottom: 3rem;
     display: inline-block;
-    border-bottom: 2px solid var(--blanco);
     color: var(--blanco);
+    text-align: center;
+    width: 100%;
 }
 
 
