@@ -1,7 +1,7 @@
 include ./templates/head.pug
-include ./templates/header.pug
 
 body
+    include ./templates/header.pug
     .contenedor-global
         form.formulario-login(method="post" action="/auth/registro")
             h2 Registrarse

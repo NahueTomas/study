@@ -1,7 +1,7 @@
 include ./templates/head.pug
-include ./templates/header.pug
 
 body
+    include ./templates/header.pug
     .contenedor
         each dato in datos
             a.carta-materia( href=`/materia/${dato.id}`, style=`background-color: #${dato.color}; box-shadow: 8px 8px #${dato.color}50;`)

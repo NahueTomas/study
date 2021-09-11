@@ -1,0 +1,43 @@
+doctype html
+html(lang="es")
+    head
+        link(rel="shortcut icon", href=`/assets/svg/logo.svg`, type="image/x-icon")
+        link(rel="stylesheet", href=`/assets/css/main.css`)
+        link(rel="stylesheet", href=`/assets/css/presentacion.css`)
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(charset="utf-8")
+        meta(lang="es")
+        title STUDY - Bienvenido
+
+    body(style="background: #ffffff;")
+        header
+            .contenedor-header 
+                a.logo(href="/")
+                    img(src="/assets/svg/logo.svg", alt="logo de study")
+                .contenedor-registro-login
+                    a.link-header(href=`/auth/registro`) registro
+                    a.link-header(href=`/auth/login`) login
+        .contenedor-mensaje-header 
+            .main-container
+                p Study alpha v1.0
+        section
+            .main-container.presentacion
+                h1.titulo-presentacion Refrescá tu mente...
+                p.parrafo-presentacion Con Study podés almacenar la información que más necesitás!!
+
+                img.img-presentacion(src="/assets/img/guia-presentacion.png")
+
+        section.parte-presentacion
+            .main-container.presentacion
+                h2.titulo-presentacion Qué es Study?
+                p.parrafo-presentacion Study es una plataforma que provee a los estudiantes una nueva manera de ordenar información.
+                p.parrafo-presentacion.mini Ahh... y es de código abierto :D
+
+        section.caracteristicas 
+            .main-container.presentacion
+                h2.titulo-presentacion Ni mejor, ni peor. Diferente...
+
+            .main-container
+                img.img-presentacion(src="/assets/img/guia-carta.png", alt="Muestra que es una carta")
+                img.img-presentacion(src="/assets/img/guia-materia.png", alt="Muestra que es una materia")
+                img.img-presentacion(src="/assets/img/guia-cartas.png", alt="Muestra las reglas de estilos en las cartas")

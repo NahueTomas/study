@@ -6,6 +6,17 @@ const Colore = require('../models/colore')
 
 const router = Router()
 
+// ==========================
+//   PAGINA DE PRESENTACION
+// ==========================
+router.get('/bienvenido', async (req, res) => {
+    res.render('bienvenido.pug')
+})
+
+// ==========================
+//        APLICACION
+// ==========================
+
 router.get('/', validarJWT, async (req, res) => {
     // Buscar en la base de datos
     const usuario = req.usuarioAuth

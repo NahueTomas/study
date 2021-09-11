@@ -11,7 +11,7 @@ header{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 500px;
+    max-width: 900px;
     margin: auto;
 }
 
@@ -21,12 +21,13 @@ header{
 }
 
 header a.link-header{
-    color: var(--gris-claro);
+    color: var(--gris-oscuro);
     font-size: .8rem;
     text-decoration: none;
     border: 1px solid var(--gris-oscuro);
     padding: .2rem 1rem;
-    border-radius: 20px;    
+    border-radius: 20px; 
+    margin-left: 10px;   
 }
 
 header a.link-header:hover{
@@ -37,5 +38,5 @@ header a.link-header:hover{
 }
 
 header img{
-    width: 3rem;
+    width: 40px;
 }

@@ -10,7 +10,7 @@ const router = Router()
 // CERRAR SESION
 router.get('/logout', (req, res) =>{
     req.session.token = ""
-    res.redirect("/")
+    res.redirect("/bienvenido")
 })
 
 // ENVIA FORMULARIO DE LOGIN
