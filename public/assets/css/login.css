@@ -22,7 +22,7 @@
     margin-top: 0px;
     margin-bottom: 3rem;
     display: inline-block;
-    border-bottom: 3px solid var(--blanco);
+    border-bottom: 2px solid var(--blanco);
     color: var(--blanco);
 }
 
@@ -36,7 +36,7 @@
 .contenedor-login input[type="text"], .contenedor-login input[type="password"]{
     background-color: transparent;
     border: none;
-    border-bottom: 1.5px solid var(--gris-claro);
+    border-bottom: 1px solid var(--gris-claro);
     margin-bottom: 1.5rem;
     color: var(--blanco);
     width: 100%;   
@@ -45,7 +45,7 @@
 .contenedor-login input[type="text"]:focus, .contenedor-login input[type="password"]:focus{
     outline: none;
     transition: all .5s ease;
-    border-bottom: 1.5px solid var(--celeste);
+    border-bottom: 1px solid var(--celeste);
 }
 
 .contenedor-login input[type="submit"]{
@@ -53,7 +53,7 @@
     border: none;
     border-radius: 10px;
     margin-top: 2rem;
-    font-weight: 700;
+    font-weight: bolder;
     color: var(--azul-medio);
     font-size: .8rem;
     padding: .3rem 1rem;
