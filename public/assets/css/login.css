@@ -11,8 +11,8 @@
     background-color: var(--azul-medio);
     padding: 1.5rem;
     border-radius: 10px;
-    border: 2px solid var(--azul-claro);
-    max-width: 500px;
+    border: 1px solid var(--azul-claro);
+    max-width: 450px;
     width: 95%;
 }
 
