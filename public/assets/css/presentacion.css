@@ -70,10 +70,6 @@ section.prueba a:hover{
     background-color: var(--blanco);
 }
 
-section.caracteristicas{
-    margin-top: 100px;
-}
-
 section.prueba{
     padding: 10px;
 }
@@ -88,7 +84,7 @@ h2.titulo-presentacion{
     text-align: center;
     font-size: 20px;
     color: var(--celeste);
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 50px 0px;
 }
 
 section{
@@ -105,11 +101,10 @@ footer .parrafo-footer{
     color: var(--blanco);
     font-size: 12px;
     text-align: end;
-    margin-top: 30px;
 }
 
 footer .contenedor-redes{
-    margin-top: 20px;
+    margin: 40px 0px;
     display: flex;
     justify-content: space-evenly;
 }

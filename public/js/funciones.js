@@ -68,10 +68,16 @@ export const traductor = (contenedor, contenido) => {
             $linea.classList.add('descripcion')
             $linea.textContent = parrafo.slice(1)
         }
-        // FÓRMULA
-        else if(parrafo.trim().split('')[0] == "{"){
+        // FORMULA
+        else if(parrafo.trim().split('')[0] == "["){
             $linea = document.createElement('div')
             $linea.classList.add('formula')
+            $linea.textContent = parrafo.slice(1)
+        }
+        // CODIGO
+        else if(parrafo.trim().split('')[0] == "{"){
+            $linea = document.createElement('div')
+            $linea.classList.add('codigo')
             $linea.textContent = parrafo.slice(1)
         } 
         // PÁRRAFO

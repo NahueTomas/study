@@ -91,6 +91,13 @@ a.link-carta-vista{
     height: 20px;
 }
 
+.codigo{
+    background: var(--azul-claro);
+    color: var(--gris-claro);
+    padding: .2rem .5rem;
+    font-size: .8rem;
+}
+
 .formula{
     text-align: center;
     margin: .5rem 0rem;
