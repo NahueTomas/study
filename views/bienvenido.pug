@@ -15,32 +15,32 @@ html(lang="es")
                 a.logo(href="/")
                     img(src="/assets/svg/logo.svg", alt="logo de study")
                 .contenedor-registro-login
-                    a.link-header(href=`/auth/registro`) registrarse
+                    a.link-header(href=`/prueba`) registro 
                     a.link-header(href=`/auth/login`) login
         .contenedor-mensaje-header 
             .main-container
                 p Study alpha v1.0
         section
             .main-container.presentacion
-                h1.titulo-presentacion Refrescá tu mente...
-                p.parrafo-presentacion Con Study podés almacenar la información que más necesitás!!
+                h1.titulo-presentacion Refrescá tu mente!
+                p.parrafo-presentacion <span>Study</span> es una plataforma para estudiantes que busca ayudarte a ordenar información. Que tomar notas no sea una ninguna ciencia...
 
-                img.img-presentacion(src="/assets/img/guia-presentacion.png")
-
-        section.parte-presentacion
-            .main-container.presentacion
-                h2.titulo-presentacion Qué es Study?
-                p.parrafo-presentacion Study es una plataforma que provee a los estudiantes una nueva manera de ordenar información.
-                p.parrafo-presentacion.mini Ahh... y es de código abierto :D
+        section.prueba
+            .main-container.presentacion.prueba-container
+                p.parrafo-presentacion.mini Te invitamos a hacer una prueba :D
+                a(href="/prueba") Demo
 
         section.caracteristicas 
             .main-container.presentacion
                 h2.titulo-presentacion Ni mejor, ni peor. Diferente...
 
             .main-container
-                img.img-presentacion(src="/assets/img/guia-carta.png", alt="Muestra que es una carta")
-                img.img-presentacion(src="/assets/img/guia-materia.png", alt="Muestra que es una materia")
-                img.img-presentacion(src="/assets/img/guia-cartas.png", alt="Muestra las reglas de estilos en las cartas")
+                .contenedor-carta-materia
+                    img.img-presentacion(src="/assets/img/guia-carta.png", alt="Muestra que es una carta")
+                    img.img-presentacion(src="/assets/img/guia-materia.png", alt="Muestra que es una materia")
+                .contenedor-guia-estilos
+                    img.img-presentacion(src="/assets/img/guia-cartas.png", alt="Muestra las reglas de estilos en las cartas")
+
 
         footer
             .main-container

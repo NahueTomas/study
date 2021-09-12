@@ -3,6 +3,7 @@ const { validarJWT } = require('../middlewares/verificar-jwt')
 const Materia = require('../models/materia')
 const Carta = require('../models/carta')
 const Colore = require('../models/colore')
+const cardExample = require('../helpers/card-example')
 
 const router = Router()
 
@@ -11,6 +12,11 @@ const router = Router()
 // ==========================
 router.get('/bienvenido', async (req, res) => {
     res.render('bienvenido.pug')
+})
+
+router.get('/prueba', async (req, res) => {
+    
+    res.render('prueba.pug', {complemento1: "auth/registro", complemento2: "registrarse", contenido: cardExample})
 })
 
 // ==========================

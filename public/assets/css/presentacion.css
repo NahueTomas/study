@@ -11,11 +11,10 @@
 
 h1.titulo-presentacion{
     text-align: start;
-    font-size: 30px;
+    font-size: 28px;
     line-height: 45px;
     color: var(--azul-oscuro);
-    margin: 0px;
-    margin-bottom: 30px;
+    margin: 0px 0px 25px 0px;
 }
 
 .presentacion{
@@ -23,15 +22,60 @@ h1.titulo-presentacion{
 }
 
 .parrafo-presentacion{
-    font-size: 16px;
-    font-style: italic;
+    font-size: 14px;
     margin: 20px 0px;
+    max-width: 450px;
+}
+
+.parrafo-presentacion span{
+    font-weight: bolder;
+    color: var(--gris-oscuro);
 }
 
 .mini{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bolder;
     text-align: center;
+}
+
+.prueba-container{
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #EAEAEA;
+    border: 1px solid #EAEAEA;
+}
+
+section.prueba p{
+    margin: 15px;
+    text-align: center;
+}
+
+section.prueba a{
+    display: block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+    border-radius: 20px;
+    background: var(--celeste);
+    padding: 5px 10px;
+    margin: 20px auto;
+}
+
+section.prueba a:hover{
+    transition: background-color .5s, color .2s, border .2s;
+    color: var(--celeste);
+    border: 1px solid var(--celeste);
+    background-color: var(--blanco);
+}
+
+section.caracteristicas{
+    margin-top: 100px;
+}
+
+section.prueba{
+    padding: 10px;
 }
 
 .img-presentacion{
@@ -40,30 +84,15 @@ h1.titulo-presentacion{
     margin: 10px 0px;
 }
 
-.parte-presentacion{
-    background-color: #EAEAEA;
-    margin: 20px 0px;
-    padding: 30px 0px;
-    margin-bottom: 40px;
-}
-
 h2.titulo-presentacion{
     text-align: center;
-    text-decoration: underline;
     font-size: 20px;
-    color: var(--azul-oscuro);
-    margin: 0px;
-    margin-bottom: 30px;
-}
-
-.caracteristicas h2{
-    text-align: start;
-    padding-right: 120px;
-    text-decoration: none;
+    color: var(--celeste);
+    margin: 0px 0px 30px 0px;
 }
 
 section{
-    margin: 30px 0px !important;
+    margin: 50px auto;
 }
 
 footer{
@@ -95,4 +124,41 @@ footer a img{
 
 body{
     padding: 0px;
+}
+
+@media screen and (min-width: 700px) {
+    h1.titulo-presentacion{
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .parrafo-presentacion{
+        font-size: 18px;
+        max-width: 700px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .mini{
+        font-size: 14px;
+    }
+
+    section{
+        margin: 70px auto;
+    }
+
+    .contenedor-carta-materia{
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .contenedor-carta-materia img{
+        width: 50%;
+    }
+
+    h2.titulo-presentacion{
+        font-size: 25px;
+    }
 }

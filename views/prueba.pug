@@ -1,0 +1,15 @@
+include ./templates/head.pug
+
+body
+    .contenedor-centrador
+        .contenedor-carta-vista(style="background-color: #CCFFFC;")
+            h1.titulo-carta-vista Days & Months
+            .contenedor-contenido-vista
+                p.contenido-carta-vista= contenido
+            .contenedor-acciones-bottom
+                .contenedor-opciones-carta
+                    a.btn-carta(href="/bienvenido")
+                        img(src="/assets/svg/btn-atras.svg" alt="Botón de ir atras")
+
+
+    script(src="/js/carta.js" type="module")
