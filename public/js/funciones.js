@@ -50,9 +50,22 @@ export const traductor = (contenedor, contenido) => {
                 }
             } else{$linea.textContent = parrafo.slice(1)}
         }
-        // TÍTULO
+        // SUBTITULO
         else if(parrafo.trim().split('')[0] == "#"){
             $linea = document.createElement('h3')
+            $linea.classList.add('subtitulo')
+            $linea.textContent = parrafo.slice(1)
+        }
+        // TITULO
+        else if(parrafo.trim().split('')[0] == "|"){
+            $linea = document.createElement('h3')
+            $linea.classList.add('titulo')
+            $linea.textContent = parrafo.slice(1)
+        }
+        // DESCRIPCION
+        else if(parrafo.trim().split('')[0] == "%"){
+            $linea = document.createElement('p')
+            $linea.classList.add('descripcion')
             $linea.textContent = parrafo.slice(1)
         }
         // FÓRMULA

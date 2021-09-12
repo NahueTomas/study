@@ -8,7 +8,7 @@
     width: 100%;
     margin: auto;
     border-radius: 5px;
-    padding: 1rem;
+    padding: 1.2rem;
     position: relative;
     box-shadow: 5px 5px var(--negro-alpha);
 }
@@ -33,7 +33,7 @@
 
 .contenedor-contenido-vista li.lista-chica{
     color: var(--negro-medio);
-    font-size: .9rem;
+    font-size: .85rem;
     margin: .4rem 0rem;
     list-style: circle;
 }
@@ -44,11 +44,25 @@
     margin: .4rem 0rem;
 }
 
-.contenedor-contenido-vista h3{
+.contenedor-contenido-vista h3.subtitulo{
     font-size: 1.2rem;
     margin: .4rem 0rem;
     text-decoration: underline;
     color: var(--negro-medio);
+}
+
+.contenedor-contenido-vista h3.titulo{
+    font-size: 1.2rem;
+    margin: .4rem 0rem;
+    color: var(--azul-claro);
+}
+
+.contenedor-contenido-vista p.descripcion{
+    font-size: .95rem;
+    font-style: italic;
+    text-align: center;
+    color: var(--negro-medio);
+    margin: .5rem 0rem;
 }
 
 p.contenido-carta-vista{
@@ -79,6 +93,7 @@ a.link-carta-vista{
 
 .formula{
     text-align: center;
+    margin: .5rem 0rem;
     padding: .2rem;
     border-radius: 5px;
     color: var(--azul);
@@ -95,7 +110,7 @@ a.link-carta-vista{
     color: var(--azul);
     left: 4px;
     bottom: 9px;
-    font-size: .7rem;
+    font-size: .6rem;
 }
 
 span.tapado{
