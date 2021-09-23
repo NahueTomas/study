@@ -154,3 +154,41 @@ span.tapado{
 .btn-sonido img{
     height: 25px;
 }
+
+.porta-imagen{
+    width: 100%;
+    padding: 1rem;
+    outline: 1px solid var(--negro-alpha);
+    position: relative;
+    background: #e6e6e6;
+}
+
+.porta-imagen:after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    background: var(--amarillo);
+    top: 0px;
+    left: -10px;
+    transform: rotate(-45deg);
+}
+
+.porta-imagen:before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    background: var(--amarillo);
+    bottom: 0px;
+    right: -10px;
+    transform: rotate(-45deg);
+}
+
+.porta-imagen img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    outline: 1px solid var(--negro-alpha);
+    background: #ccc;
+}

@@ -11,6 +11,7 @@
 
 :root{
     --rojo: #f24d4d;
+    --amarillo: rgba(240, 220, 109, 0.781);
 
     --azul: #334257;
     --azul-oscuro: #1E2228;

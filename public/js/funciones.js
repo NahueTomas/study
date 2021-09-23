@@ -62,6 +62,14 @@ export const traductor = (contenedor, contenido) => {
             $linea.classList.add('titulo')
             $linea.textContent = parrafo.slice(1)
         }
+        // IMAGEN
+        else if(parrafo.trim().split('')[0] == "~"){
+            $linea = document.createElement('div')
+            $linea.classList.add('porta-imagen')
+            const $img = document.createElement('img')
+            $img.src = parrafo.slice(1)
+            $linea.appendChild($img)
+        }
         // DESCRIPCION
         else if(parrafo.trim().split('')[0] == "%"){
             $linea = document.createElement('p')
