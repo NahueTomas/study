@@ -5,7 +5,7 @@ export const traductor = (contenedor, contenido) => {
     arrayContenido.forEach( parrafo => {
         
         let $linea = ""
-
+        
         // ESPACIO
         if( parrafo.trim() == ""){
             $linea = document.createElement('br')
@@ -87,7 +87,7 @@ export const traductor = (contenedor, contenido) => {
             $linea = document.createElement('div')
             $linea.classList.add('codigo')
             $linea.textContent = parrafo.slice(1)
-        } 
+        }
         // PÁRRAFO
         else{
             $linea = document.createElement('p')
